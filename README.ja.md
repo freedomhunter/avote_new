@@ -84,7 +84,7 @@ yarn dev
 
 ### クレジット
 
-このアプリケーションの開発は、ステークホルダーがRSNのガバナンスに参加できるようにするために、[Greymass](https://benchx.io)チームが主導しています。
+このアプリケーションの開発は、ステークホルダーがRSNのガバナンスに参加できるようにするために、[BenchX](https://benchx.io)チームが主導しています。
 
 ### Release Signatures
 

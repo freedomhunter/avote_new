@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Divider, Grid, Header, Image, Segment } from 'semantic-ui-react';
 import { I18n } from 'react-i18next';
 
-import logo from '../../renderer/assets/images/benchxtext.png';
+import logo from '../../renderer/assets/images/benchx.png';
 import GlobalButtonResetContainer from '../containers/Global/Button/Reset';
 
 const { shell } = require('electron');
@@ -53,7 +53,7 @@ export default class About extends Component<Props> {
                 </Grid.Column>
                 <Grid.Column width={8}>
                   <Segment>
-                    <Image src={logo} alt="Greymass" />
+                    <Image src={logo} alt="BenchX" />
                     <Segment basic padded>
                       <p>{t('about_benchx_message_1')}</p>
                       <p>

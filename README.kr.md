@@ -76,7 +76,7 @@ yarn dev
 
 ### 협찬
 
-이 프로그램의 개발은 [Greymass](https://benchx.io) 팀 구성원이 이끌어 내며 이해 관계자가 RSN의 지배 구조에 참여할 수 있도록 노력하고 있습니다.
+이 프로그램의 개발은 [BenchX](https://benchx.io) 팀 구성원이 이끌어 내며 이해 관계자가 RSN의 지배 구조에 참여할 수 있도록 노력하고 있습니다.
 
 ### Release Signatures
 

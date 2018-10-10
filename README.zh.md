@@ -84,7 +84,7 @@ yarn dev
 
 ### 声明
 
-该应用由[Greymass](https://benchx.io)团队领导开发，用于帮助RSN持有人参与RSN的治理。
+该应用由[BenchX](https://benchx.io)团队领导开发，用于帮助RSN持有人参与RSN的治理。
 
 ### Release Signatures
 

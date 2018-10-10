@@ -86,7 +86,7 @@ class TabMenu extends Component<Props> {
             active={activeItem === 'about'}
             onClick={handleItemClick}
           >
-            <img alt="Greymass" src={logo} />
+            <img alt="BenchX" src={logo} />
           </Menu.Item>
         </Menu.Menu>
       </Menu>

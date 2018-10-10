@@ -84,7 +84,7 @@ yarn dev
 
 ### Credits
 
-The development of this application is being led by members of the [Greymass](https://benchx.io) team in an effort to let stakeholders participate in RSN’ governance.
+The development of this application is being led by members of the [BenchX](https://benchx.io) team in an effort to let stakeholders participate in RSN’ governance.
 
 ### Release Signatures
 
