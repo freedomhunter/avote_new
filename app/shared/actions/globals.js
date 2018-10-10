@@ -3,7 +3,7 @@ import { Decimal } from 'decimal.js';
 
 import * as types from './types';
 
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function getGlobals() {
   return (dispatch: () => void, getState) => {
@@ -11,7 +11,7 @@ export function getGlobals() {
       type: types.GET_GLOBALS_REQUEST
     });
     const { connection } = getState();
-    eos(connection).getTableRows(true, 'eosio', 'eosio', 'global').then((results) => dispatch({
+    rsn(connection).getTableRows(true, 'arisen', 'arisen', 'global').then((results) => dispatch({
       type: types.GET_GLOBALS_SUCCESS,
       payload: { results }
     })).catch((err) => dispatch({
@@ -21,7 +21,7 @@ export function getGlobals() {
   };
 }
 
-export function getCurrencyStats(contractName = "eosio.token", symbolName = "EOS") {
+export function getCurrencyStats(contractName = "arisen.token", symbolName = "RSN") {
   const account = contractName.toLowerCase();
   const symbol = symbolName.toUpperCase();
   return (dispatch: () => void, getState) => {
@@ -29,7 +29,7 @@ export function getCurrencyStats(contractName = "eosio.token", symbolName = "EOS
       type: types.GET_CURRENCYSTATS_REQUEST
     });
     const { connection } = getState();
-    eos(connection).getCurrencyStats(account, symbol).then((results) => {
+    rsn(connection).getCurrencyStats(account, symbol).then((results) => {
       if (isEmpty(results)) {
         return dispatch({
           type: types.GET_CURRENCYSTATS_FAILURE,
@@ -65,13 +65,13 @@ export function getRamStats() {
     });
     const { connection } = getState();
     const query = {
-      scope: 'eosio',
-      code: 'eosio',
+      scope: 'arisen',
+      code: 'arisen',
       table: 'rammarket',
       json: true
     };
 
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       const { rows } = results;
       const baseBalance = rows[0].base.balance.split(' ')[0];
       const quoteBalance = rows[0].quote.balance.split(' ')[0];

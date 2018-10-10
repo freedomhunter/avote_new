@@ -113,7 +113,7 @@ class WalletPanelFormRamBuy extends Component<Props> {
       return 'ram_has_to_be_over_minimum_amount';
     }
 
-    if (!balance.EOS || Decimal(balance.EOS).lessThan(priceOfRam)) {
+    if (!balance.RSN || Decimal(balance.RSN).lessThan(priceOfRam)) {
       return 'not_enough_balance';
     }
 
@@ -201,7 +201,7 @@ class WalletPanelFormRamBuy extends Component<Props> {
             <div>
               <Menu tabular>
                 <Menu.Item name="byRAMAmount" active={activeTab === 'byRAMAmount'} onClick={this.handleTabClick} />
-                <Menu.Item name="byEOSAmount" active={activeTab === 'byEOSAmount'} onClick={this.handleTabClick} />
+                <Menu.Item name="byRSNAmount" active={activeTab === 'byRSNAmount'} onClick={this.handleTabClick} />
               </Menu>
               <Form
                 onKeyPress={this.onKeyPress}
@@ -231,7 +231,7 @@ class WalletPanelFormRamBuy extends Component<Props> {
                   </Grid.Column>
                   <Grid.Column width={8}>
                     <WalletPanelFormRamStats
-                      EOSbalance={balance.EOS}
+                      RSNbalance={balance.RSN}
                       ramQuota={ramQuota}
                       ramUsage={ramUsage}
                     />
@@ -265,7 +265,7 @@ class WalletPanelFormRamBuy extends Component<Props> {
               buying
               ramAmount={ramToBuy}
               newRamAmount={ramQuota + Number(ramToBuy)}
-              EOSbalance={balance.EOS}
+              RSNbalance={balance.RSN}
               onBack={this.onBack}
               onConfirm={this.onConfirm}
               priceOfRam={priceOfRam}

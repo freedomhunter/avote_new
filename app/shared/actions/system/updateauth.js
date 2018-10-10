@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function updateauth(permission, parent, auth, authorizationOverride = false) {
   return (dispatch: () => void, getState) => {
@@ -15,7 +15,7 @@ export function updateauth(permission, parent, auth, authorizationOverride = fal
     if (authorizationOverride || connection.authorization) {
       authorization = [authorizationOverride || connection.authorization];
     }
-    return eos(connection, true).updateauth({
+    return rsn(connection, true).updateauth({
       account,
       permission,
       parent,

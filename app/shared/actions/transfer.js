@@ -1,9 +1,9 @@
 import * as types from './types';
 
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 import { getCurrencyBalance } from './accounts';
 
-export function transfer(from, to, quantity, memo, symbol = 'EOS') {
+export function transfer(from, to, quantity, memo, symbol = 'RSN') {
   return (dispatch: () => void, getState) => {
     const {
       balances,
@@ -15,7 +15,7 @@ export function transfer(from, to, quantity, memo, symbol = 'EOS') {
     try {
       const contracts = balances.__contracts;
       const account = contracts[symbol].contract;
-      return eos(connection, true).transaction(account, contract => {
+      return rsn(connection, true).transaction(account, contract => {
         contract.transfer(
           from,
           to,
@@ -28,8 +28,8 @@ export function transfer(from, to, quantity, memo, symbol = 'EOS') {
         sign: connection.sign
       }).then((tx) => {
         // If this is an offline transaction, also store the ABI
-        if (!connection.sign && account !== 'eosio.token') {
-          return eos(connection, true).getAbi(account).then((contract) =>
+        if (!connection.sign && account !== 'arisen.token') {
+          return rsn(connection, true).getAbi(account).then((contract) =>
             dispatch({
               payload: {
                 contract,

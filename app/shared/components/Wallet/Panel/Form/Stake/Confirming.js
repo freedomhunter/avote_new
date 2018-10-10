@@ -34,7 +34,7 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
     const cpuDifference = cpuAmount - cpuOriginal.toNumber();
     const netDifference = netAmount - netOriginal.toNumber();
 
-    const lessThanOneEosStaked = (cpuAmount < 1 || netAmount < 1);
+    const lessThanOneRsnStaked = (cpuAmount < 1 || netAmount < 1);
 
     const statsFetcher = new StatsFetcher(account, balance);
 
@@ -64,10 +64,10 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
               <Segment>
                 <Header textAlign="center">
                   <font color="green">
-                    <Icon name="wifi" />{t('about_to_stake_to_net')} {netDifference.toFixed(4)} EOS
+                    <Icon name="wifi" />{t('about_to_stake_to_net')} {netDifference.toFixed(4)} RSN
                   </font>
                   <Header.Subheader>
-                    ({t('will_have')} {netAmount.toFixed(4)} {t('eos_in_net_after')})
+                    ({t('will_have')} {netAmount.toFixed(4)} {t('rsn_in_net_after')})
                   </Header.Subheader>
                 </Header>
               </Segment>
@@ -77,10 +77,10 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
               <Segment>
                 <Header textAlign="center">
                   <font color="red">
-                    <Icon name="wifi" />{t('about_to_unstake_from_net')} {(-netDifference).toFixed(4)} EOS
+                    <Icon name="wifi" />{t('about_to_unstake_from_net')} {(-netDifference).toFixed(4)} RSN
                   </font>
                   <Header.Subheader>
-                    ({t('will_have')} {netAmount.toFixed(4)} {t('eos_in_net_after')})
+                    ({t('will_have')} {netAmount.toFixed(4)} {t('rsn_in_net_after')})
                   </Header.Subheader>
                 </Header>
               </Segment>
@@ -90,10 +90,10 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
               <Segment>
                 <Header textAlign="center">
                   <font color="green">
-                    <Icon name="microchip" />{t('about_to_stake_to_cpu')} <b>{cpuDifference.toFixed(4)} EOS</b>
+                    <Icon name="microchip" />{t('about_to_stake_to_cpu')} <b>{cpuDifference.toFixed(4)} RSN</b>
                   </font>
                   <Header.Subheader>
-                    ({t('will_have')} {cpuAmount.toFixed(4)} {t('eos_in_cpu_after')})
+                    ({t('will_have')} {cpuAmount.toFixed(4)} {t('rsn_in_cpu_after')})
                   </Header.Subheader>
                 </Header>
               </Segment>
@@ -103,18 +103,18 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
               <Segment>
                 <Header textAlign="center">
                   <font color="red">
-                    <Icon name="microchip" />{t('about_to_unstake_from_cpu')} <b>{(-cpuDifference).toFixed(4)} EOS</b>
+                    <Icon name="microchip" />{t('about_to_unstake_from_cpu')} <b>{(-cpuDifference).toFixed(4)} RSN</b>
                   </font>
                   <Header.Subheader>
-                    ({t('will_have')} {cpuAmount.toFixed(4)} {t('eos_in_cpu_after')})
+                    ({t('will_have')} {cpuAmount.toFixed(4)} {t('rsn_in_cpu_after')})
                   </Header.Subheader>
                 </Header>
               </Segment>
             ) : ''}
           </Segment.Group>
 
-          {(accountName === account.account_name && lessThanOneEosStaked) ? (
-            <Message warning="true">{t('will_have_less_than_one_eos_staked')}</Message>
+          {(accountName === account.account_name && lessThanOneRsnStaked) ? (
+            <Message warning="true">{t('will_have_less_than_one_rsn_staked')}</Message>
           ) : ''}
 
           {(unstakingWhenAmountBeingUnstaked) ? (
@@ -122,7 +122,7 @@ class WalletPanelFormStakeConfirming extends Component<Props> {
               icon="warning sign"
               warning="true"
             >
-              {t('have_already_unstaked')} {statsFetcher.totalBeingUnstaked().toFixed(4)} EOS {t('unstaking_will_be_reset')}
+              {t('have_already_unstaked')} {statsFetcher.totalBeingUnstaked().toFixed(4)} RSN {t('unstaking_will_be_reset')}
             </Message>
           ) : ''}
 

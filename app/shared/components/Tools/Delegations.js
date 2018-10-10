@@ -40,7 +40,7 @@ class ToolsDelegations extends Component<Props> {
       settings
     } = this.props;
 
-    actions.getTable('eosio', settings.account, 'delband');
+    actions.getTable('arisen', settings.account, 'delband');
   }
 
   onOpenModal = (delegation) => this.setState({ openModal: true, delegationToEdit: delegation });
@@ -76,9 +76,9 @@ class ToolsDelegations extends Component<Props> {
     } = this.state;
 
     const delegations = tables &&
-                        tables.eosio &&
-                        tables.eosio[settings.account] &&
-                        tables.eosio[settings.account].delband.rows;
+                        tables.arisen &&
+                        tables.arisen[settings.account] &&
+                        tables.arisen[settings.account].delband.rows;
 
     const delegationsToDisplay = sortBy(delegations, 'accountName');
 

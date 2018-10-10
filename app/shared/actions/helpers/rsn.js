@@ -1,10 +1,10 @@
 import { decrypt } from '../wallet';
 
 const CryptoJS = require('crypto-js');
-const ecc = require('eosjs-ecc');
-const Eos = require('eosjs');
+const ecc = require('rsnjs-ecc');
+const Rsn = require('rsnjs');
 
-export default function eos(connection, signing = false) {
+export default function rsn(connection, signing = false) {
   const decrypted = Object.assign({}, connection);
   if (signing && decrypted.keyProviderObfuscated) {
     const {
@@ -30,5 +30,5 @@ export default function eos(connection, signing = false) {
   ) {
     delete decrypted.authorization;
   }
-  return Eos(decrypted);
+  return Rsn(decrypted);
 }

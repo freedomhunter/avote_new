@@ -1,5 +1,5 @@
 const exchangeAccounts = [
-  'binancecleos',
+  'binanceclrsn',
   'bitfinexdep1',
   'krakenkraken'
 ];

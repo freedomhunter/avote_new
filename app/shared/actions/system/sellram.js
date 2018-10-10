@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function sellram(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function sellram(amount) {
 
     const { account } = settings;
 
-    return eos(connection, true).sellram({
+    return rsn(connection, true).sellram({
       account,
       bytes: Number(amount)
     }).then((tx) => {

@@ -24,7 +24,7 @@ class WalletStatus extends Component<Props> {
       settings
     } = this.props;
 
-    actions.getTable('eosio', settings.account, 'delband');
+    actions.getTable('arisen', settings.account, 'delband');
   }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -56,9 +56,9 @@ class WalletStatus extends Component<Props> {
     const balance = balances[settings.account] || {};
 
     const delegations = tables &&
-                        tables.eosio &&
-                        tables.eosio[settings.account] &&
-                        tables.eosio[settings.account].delband.rows;
+                        tables.arisen &&
+                        tables.arisen[settings.account] &&
+                        tables.arisen[settings.account].delband.rows;
 
     const statsFetcher = new StatsFetcher(account, balance, delegations);
 

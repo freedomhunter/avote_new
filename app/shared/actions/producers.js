@@ -1,7 +1,7 @@
 import sortBy from 'lodash/sortBy';
 import concat from 'lodash/concat';
 
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 import * as types from './types';
 
 export function clearProducerCache() {
@@ -28,15 +28,15 @@ export function getProducers(previous = false) {
     const { connection } = getState();
     const query = {
       json: true,
-      code: 'eosio',
-      scope: 'eosio',
+      code: 'arisen',
+      scope: 'arisen',
       table: 'producers',
       limit: 1000,
     };
     if (previous) {
       query.lower_bound = previous[previous.length - 1].owner;
     }
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       // If previous rows were returned
       if (previous) {
@@ -55,8 +55,8 @@ export function getProducers(previous = false) {
       let backupMinimumPercent = false;
       let tokensToProducersForVotes = false;
       const { contract } = globals;
-      if (contract && contract['eosio.token']) {
-        const supply = parseFloat(contract['eosio.token'].EOS.supply);
+      if (contract && contract['arisen.token']) {
+        const supply = parseFloat(contract['arisen.token'].RSN.supply);
         // yearly inflation
         const inflation = 0.04879;
         // Tokens per year
@@ -71,7 +71,7 @@ export function getProducers(previous = false) {
         backupMinimumPercent = 100 / tokensToProducersForVotes;
       }
       const data = rows
-        .filter((p) => (p.producer_key !== 'EOS1111111111111111111111111111111114T1Anm'))
+        .filter((p) => (p.producer_key !== 'RSN1111111111111111111111111111111114T1Anm'))
         .map((producer) => {
           const votes = parseInt(producer.total_votes, 10);
           const percent = votes / current.total_producer_vote_weight;
@@ -108,7 +108,7 @@ export function getProducersInfo(previous = false) {
     });
     const { connection } = getState();
     // Don't retrieve if we're not on mainnet
-    if (connection.chain !== 'eos-mainnet') return;
+    if (connection.chain !== 'rsn-mainnet') return;
     const query = {
       json: true,
       code: 'producerjson',
@@ -119,7 +119,7 @@ export function getProducersInfo(previous = false) {
     if (previous) {
       query.lower_bound = previous[previous.length - 1].owner;
     }
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       // If previous rows were returned
       if (previous) {
@@ -154,7 +154,7 @@ export function getProducerInfo(producer) {
     });
     const { connection } = getState();
     // Don't retrieve if we're not on mainnet
-    if (connection.chain !== 'eos-mainnet') return;
+    if (connection.chain !== 'rsn-mainnet') return;
     const query = {
       json: true,
       code: 'producerjson',
@@ -164,7 +164,7 @@ export function getProducerInfo(producer) {
       table_key: 'owner',
       lower_bound: producer
     };
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       const result = results.rows[0];
       if (result.owner !== producer) {
         return dispatch({

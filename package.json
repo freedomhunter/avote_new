@@ -1,8 +1,8 @@
 {
-  "name": "eos-voter",
-  "productName": "eos-voter",
+  "name": "avote",
+  "productName": "avote",
   "version": "0.5.3",
-  "description": "Simple light wallet and block producer voting tool for the EOS blockchain",
+  "description": "Simple light wallet and governance voting tool for the Arisen blockchain",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.renderer.dev.dll.js --colors",
@@ -29,8 +29,8 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "eos-voter",
-    "appId": "com.greymass.eos-voter",
+    "productName": "avote",
+    "appId": "com.arisen.avote",
     "artifactName": "${os}-${productName}-${version}-${arch}.${ext}",
     "asar": true,
     "files": [
@@ -81,16 +81,16 @@
       "oneClick": false,
       "createDesktopShortcut": "always",
       "createStartMenuShortcut": true,
-      "shortcutName": "eos-voter"
+      "shortcutName": "avote"
     },
     "linux": {
       "category": "Network",
-      "description": "Simple light wallet and block producer voting tool for the EOS blockchain",
+      "description": "Simple light wallet and block producer voting tool for the Arisen blockchain",
       "desktop": {
-        "Name": "eos-voter",
-        "GenericName": "EOS Voting Client + Wallet",
-        "X-GNOME-FullName": "eos-voter",
-        "Comment": "Simple light wallet and block producer voting tool for the EOS blockchain",
+        "Name": "avote",
+        "GenericName": "aVote",
+        "X-GNOME-FullName": "avote",
+        "Comment": "Simple light wallet and block producer voting tool for the Arisen blockchain",
         "Type": "Application",
         "Terminal": "false",
         "StartupNotify": "false",
@@ -112,7 +112,7 @@
       ]
     },
     "snap": {
-      "synopsis": "Simple light wallet and block producer voting tool for the EOS blockchain"
+      "synopsis": "Simple light wallet and block producer voting tool for the Arisen blockchain"
     },
     "directories": {
       "buildResources": "resources",
@@ -121,23 +121,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greymass/eos-voter.git"
+    "url": "git+https://github.com/arisenio/avote.git"
   },
   "author": {
-    "name": "Greymass",
-    "email": "hello@greymass.com",
-    "url": "https://github.com/greymass"
+    "name": "Arisen Community",
+    "email": "community@arisen.network",
+    "url": "https://github.com/arisenio"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/greymass/eos-voter/issues"
+    "url": "https://github.com/arisenio/avote/issues"
   },
   "keywords": [
-    "eos",
+    "arisen",
     "voting",
     "wallet"
   ],
-  "homepage": "https://github.com/greymass/eos-voter#readme",
+  "homepage": "https://github.com/arisenio/avote#readme",
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/fileMock.js",
@@ -236,13 +236,13 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "arisenjs": "1.0.0",
     "crypto-js": "^3.1.9-1",
     "decimal.js": "^10.0.1",
     "dot-prop-immutable": "^1.4.0",
     "electron-context-menu": "^0.10.0",
     "electron-store": "^2.0.0",
     "electron-updater": "^2.21.10",
-    "eosjs": "16.0.8",
     "history": "^4.7.2",
     "i": "^0.3.6",
     "i18next": "^11.3.2",

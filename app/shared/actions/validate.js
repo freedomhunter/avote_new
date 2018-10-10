@@ -1,9 +1,9 @@
 import { getCurrencyBalance } from './accounts';
 import * as types from './types';
 import * as chain from './chain';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
-const ecc = require('eosjs-ecc');
+const ecc = require('rsnjs-ecc');
 
 export function validateAccount(account) {
   return (dispatch: () => void, getState) => {
@@ -18,7 +18,7 @@ export function validateAccount(account) {
     } = getState();
     try {
       // A generic info call to make sure it's working
-      eos(connection).getAccount(account).then((results) => {
+      rsn(connection).getAccount(account).then((results) => {
         // PATCH - Force in self_delegated_bandwidth if it doesn't exist
         const modified = results;
         if (!modified.self_delegated_bandwidth) {
@@ -60,7 +60,7 @@ export function validateNode(node) {
     });
     // Ensure there's a value to test
     if (node || node.length !== 0) {
-      // Establish EOS connection
+      // Establish RSN connection
       try {
         const {
           connection
@@ -81,7 +81,7 @@ export function validateNode(node) {
           httpEndpoint
         };
         // A generic info call to make sure it's working
-        eos(modified).getInfo({}).then(result => {
+        rsn(modified).getInfo({}).then(result => {
           // If we received a valid height, confirm this server can be connected to
           if (result.head_block_num > 1) {
             // Dispatch success
@@ -126,7 +126,7 @@ export function validateKey(key) {
     try {
       let account = accounts[settings.account];
       if (!account) {
-        account = eos(connection).getAccount(settings.account);
+        account = rsn(connection).getAccount(settings.account);
       }
       // Keys must resolve to one of these types of permissions
       const permissions = ['active', 'owner'];

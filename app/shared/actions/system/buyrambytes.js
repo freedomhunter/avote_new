@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function buyrambytes(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function buyrambytes(amount) {
 
     const { account } = settings;
 
-    return eos(connection, true).buyrambytes({
+    return rsn(connection, true).buyrambytes({
       payer: account,
       receiver: account,
       bytes: Number(amount)

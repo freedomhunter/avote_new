@@ -1,7 +1,7 @@
 import sortBy from 'lodash/sortBy';
 
 import * as types from './types';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function getBlockExplorers() {
   return (dispatch: () => void, getState) => {
@@ -10,7 +10,7 @@ export function getBlockExplorers() {
     });
     // const { connection } = getState();
     // // Don't retrieve if we're not on mainnet
-    // if (connection.chain !== 'eos-mainnet') {
+    // if (connection.chain !== 'rsn-mainnet') {
     //   return dispatch({
     //     type: types.SYSTEM_BLOCKEXPLORERS_FAILURE
     //   });
@@ -32,36 +32,36 @@ export function getBlockExplorers() {
         }
       },
       {
-        name: 'eosflare.io',
+        name: 'rsnflare.io',
         patterns: {
-          account: 'https://eosflare.io/account/{account}',
-          txid: 'https://eosflare.io/tx/{txid}'
+          account: 'https://rsnflare.io/account/{account}',
+          txid: 'https://rsnflare.io/tx/{txid}'
         }
       },
       {
-        name: 'eosmonitor.io',
+        name: 'rsnmonitor.io',
         patterns: {
-          account: 'https://eosmonitor.io/account/{account}',
-          txid: 'https://eosmonitor.io/txn/{txid}'
+          account: 'https://rsnmonitor.io/account/{account}',
+          txid: 'https://rsnmonitor.io/txn/{txid}'
         }
       },
       {
-        name: 'eospark.com',
+        name: 'rsnpark.com',
         patterns: {
-          account: 'https://eospark.com/MainNet/account/{account}',
-          txid: 'https://eospark.com/MainNet/tx/{txid}'
+          account: 'https://rsnpark.com/MainNet/account/{account}',
+          txid: 'https://rsnpark.com/MainNet/tx/{txid}'
         }
       },
       {
-        name: 'eosweb.net',
+        name: 'rsnweb.net',
         patterns: {
-          account: 'https://eosweb.net/account/{account}',
-          txid: 'https://eosweb.net/transaction/{txid}'
+          account: 'https://rsnweb.net/account/{account}',
+          txid: 'https://rsnweb.net/transaction/{txid}'
         }
       }
     ];
 
-    // eos(connection).getTableRows(query).then((results) => {
+    // rsn(connection).getTableRows(query).then((results) => {
     //   const { rows } = results;
 
     const sortedList = sortBy(rows, 'name');

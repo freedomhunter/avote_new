@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Button, Container, Grid, Image, Header } from 'semantic-ui-react';
 import { translate } from 'react-i18next';
 
-import eos from '../../renderer/assets/images/eos.png';
+import rsn from '../../renderer/assets/images/arisen.png';
 
 import WelcomeAccount from './Welcome/Account';
 import WelcomeBreadcrumb from './Welcome/Breadcrumb';
@@ -110,7 +110,7 @@ class Welcome extends Component<Props> {
               color="teal"
               textAlign="center"
             >
-              <Image src={eos} />
+              <Image src={rsn} />
               <Header.Content>
                 {t('application_name')}
                 <Header.Subheader>

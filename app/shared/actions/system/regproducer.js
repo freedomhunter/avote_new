@@ -1,6 +1,6 @@
 import * as types from '../types';
 
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function regproducer(producerKey, producerUrl, producerLocation = 0) {
   return (dispatch: () => void, getState) => {
@@ -12,7 +12,7 @@ export function regproducer(producerKey, producerUrl, producerLocation = 0) {
     dispatch({
       type: types.SYSTEM_REGPRODUCER_PENDING
     });
-    return eos(connection, true).regproducer({
+    return rsn(connection, true).regproducer({
       producer: account,
       producer_key: producerKey,
       url: producerUrl,

@@ -3,7 +3,7 @@ import { get } from 'dot-prop-immutable';
 import * as types from '../actions/types';
 
 const initialState = {
-  // If the active session has accepted the EOS constitution
+  // If the active session has accepted the ARISEN constitution
   acceptedConstitution: false,
   // If the wallet has ackknowledged understanding the smart contract tool
   acceptedContractInterface: false,
@@ -12,13 +12,13 @@ const initialState = {
   // The loaded account
   account: '',
   // The block explorer used
-  blockExplorer: 'bloks.io',
+  blockExplorer: 'arisenexplorer.com',
   // List of contacts
   contacts: [],
   // Custom tokens the wallet should be tracking
   customTokens: [
-    // Always track the EOS token
-    'eosio.token:EOS'
+    // Always track the RSN token
+    'arisen.token:RSN'
   ],
   // Defaults to displaying resources remaining
   displayResourcesAvailable: true,

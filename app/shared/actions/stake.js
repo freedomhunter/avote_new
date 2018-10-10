@@ -8,7 +8,7 @@ import { undelegatebwParams } from './system/undelegatebw';
 
 import * as AccountActions from './accounts';
 import * as TableActions from './table';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function setStake(accountName, netAmount, cpuAmount) {
   return (dispatch: () => void, getState) => {
@@ -22,9 +22,9 @@ export function setStake(accountName, netAmount, cpuAmount) {
     const currentAccount = accounts[settings.account];
 
     const delegations = tables &&
-                        tables.eosio &&
-                        tables.eosio[settings.account] &&
-                        tables.eosio[settings.account].delband.rows;
+                        tables.arisen &&
+                        tables.arisen[settings.account] &&
+                        tables.arisen[settings.account].delband.rows;
 
     const {
       increaseInStake,
@@ -33,7 +33,7 @@ export function setStake(accountName, netAmount, cpuAmount) {
 
     dispatch({ type: types.SYSTEM_STAKE_PENDING });
 
-    return eos(connection, true).transaction(tr => {
+    return rsn(connection, true).transaction(tr => {
       if (increaseInStake.netAmount > 0 || increaseInStake.cpuAmount > 0) {
         tr.delegatebw(delegatebwParams(
           currentAccount.account_name,
@@ -59,7 +59,7 @@ export function setStake(accountName, netAmount, cpuAmount) {
         if (accountName === settings.account) {
           dispatch(AccountActions.getAccount(accountName));
         } else {
-          dispatch(TableActions.getTable('eosio', settings.account, 'delband'));
+          dispatch(TableActions.getTable('arisen', settings.account, 'delband'));
         }
       }, 500);
 
@@ -91,7 +91,7 @@ function getStakeChanges(currentAccount, accountName, delegations, nextNetAmount
     const index = findIndex(delegations, { to: accountName });
 
     if (index === -1) {
-      accountResources = { cpu_weight: '0 EOS', net_weight: '0 EOS' };
+      accountResources = { cpu_weight: '0 RSN', net_weight: '0 RSN' };
     } else {
       accountResources = delegations[index];
     }

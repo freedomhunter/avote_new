@@ -8,7 +8,7 @@ import ContractInterfaceTabData from './Tab/Data';
 import ContractInterfaceTabTables from './Tab/Tables';
 import ContractInterfaceSelectorContract from './Selector/Contract';
 
-import EOSContract from '../../../utils/EOS/Contract';
+import RSNContract from '../../../utils/RSN/Contract';
 
 class ContractInterfaceComponent extends Component<Props> {
   state = {
@@ -21,7 +21,7 @@ class ContractInterfaceComponent extends Component<Props> {
     const { contracts } = this.props;
     return (
       contracts[name]
-      && contracts[name] instanceof EOSContract
+      && contracts[name] instanceof RSNContract
     );
   }
   onChange = (e, { name, value }) => {

@@ -14,7 +14,7 @@ import * as ValidateActions from '../../actions/validate';
 import * as WalletActions from '../../actions/wallet';
 import * as WalletsActions from '../../actions/wallets';
 
-const ecc = require('eosjs-ecc');
+const ecc = require('arisenjs-ecc');
 
 type Props = {
   accounts: {},

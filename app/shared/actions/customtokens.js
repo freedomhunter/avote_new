@@ -4,7 +4,7 @@ import sortBy from 'lodash/sortBy';
 import uniqWith from 'lodash/uniqWith';
 
 import * as types from './types';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function getCustomTokens(previous = false) {
   return (dispatch: () => void, getState) => {
@@ -13,7 +13,7 @@ export function getCustomTokens(previous = false) {
     });
     const { connection } = getState();
     // Don't retrieve if we're not on mainnet
-    if (connection.chain !== 'eos-mainnet') {
+    if (connection.chain !== 'rsn-mainnet') {
       return dispatch({
         type: types.SYSTEM_CUSTOMTOKENS_FAILURE
       });
@@ -29,7 +29,7 @@ export function getCustomTokens(previous = false) {
     if (previous) {
       query.lower_bound = previous[previous.length - 1].owner;
     }
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       // If previous rows were returned
       if (previous) {

@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccounts } from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function voteproducers(producers = [], proxy = '') {
   return (dispatch: () => void, getState) => {
@@ -13,9 +13,9 @@ export function voteproducers(producers = [], proxy = '') {
       type: types.SYSTEM_VOTEPRODUCER_PENDING
     });
     const { account } = settings;
-    // sort (required by EOS)
+    // sort (required by RSN)
     producers.sort();
-    return eos(connection, true).voteproducer(account, proxy, producers)
+    return rsn(connection, true).voteproducer(account, proxy, producers)
       .then((tx) => {
         const accounts = [account];
         // If a proxy is set, that account also needs to be loaded

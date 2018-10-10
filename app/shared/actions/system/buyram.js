@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function buyram(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,10 +16,10 @@ export function buyram(amount) {
 
     const { account } = settings;
 
-    return eos(connection, true).buyram({
+    return rsn(connection, true).buyram({
       payer: account,
       receiver: account,
-      quant: `${amount.toFixed(4)} EOS`
+      quant: `${amount.toFixed(4)} RSN`
     }).then((tx) => {
       setTimeout(dispatch(getAccount(account)), 500);
 

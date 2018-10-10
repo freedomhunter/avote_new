@@ -1,6 +1,6 @@
 import * as types from '../types';
 import * as AccountActions from '../accounts';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
 export function delegatebw(delegator, receiver, netAmount, cpuAmount) {
   return (dispatch: () => void, getState) => {
@@ -12,7 +12,7 @@ export function delegatebw(delegator, receiver, netAmount, cpuAmount) {
       type: types.SYSTEM_DELEGATEBW_PENDING
     });
 
-    return eos(connection, true).transaction(tr => {
+    return rsn(connection, true).transaction(tr => {
       tr.delegatebw(delegatebwParams(delegator, receiver, netAmount, cpuAmount));
     }).then((tx) => {
       dispatch(AccountActions.getAccount(delegator));
@@ -34,8 +34,8 @@ export function delegatebwParams(delegator, receiver, netAmount, cpuAmount, tran
   return {
     from: delegator,
     receiver,
-    stake_net_quantity: `${stakeNetAmount.toFixed(4)} EOS`,
-    stake_cpu_quantity: `${stakeCpuAmount.toFixed(4)} EOS`,
+    stake_net_quantity: `${stakeNetAmount.toFixed(4)} RSN`,
+    stake_cpu_quantity: `${stakeCpuAmount.toFixed(4)} RSN`,
     transfer: transferTokens ? 1 : 0
   };
 }

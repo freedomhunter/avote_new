@@ -1,7 +1,7 @@
 import { set } from 'dot-prop-immutable';
 
 import * as types from './types';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function buildTransaction(contract, action, account, data) {
   return (dispatch: () => void, getState) => {
@@ -33,7 +33,7 @@ export function buildTransaction(contract, action, account, data) {
       ]
     };
 
-    eos(modified)
+    rsn(modified)
       .transaction(op, {
         broadcast: false,
         forceActionDataHex: false,
@@ -61,7 +61,7 @@ export function broadcastTransaction(tx) {
     const {
       connection
     } = getState();
-    eos(connection)
+    rsn(connection)
       .pushTransaction(tx.transaction).then((response) =>
         dispatch({
           payload: { tx: response },
@@ -111,7 +111,7 @@ export function signTransaction(tx, contract = false) {
     const {
       connection
     } = getState();
-    const signer = eos(connection, true);
+    const signer = rsn(connection, true);
     // If a contract was specified along with the transaction, load it.
     if (contract && contract.account && contract.abi) {
       signer.fc.abiCache.abi(contract.account, contract.abi);

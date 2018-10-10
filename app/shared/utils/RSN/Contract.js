@@ -1,6 +1,6 @@
 import { forOwn, find, map, pick } from 'lodash';
 
-const Eos = require('eosjs');
+const Rsn = require('arisenjs');
 
 export const typeMap = {
   bool: 'bool',
@@ -18,7 +18,7 @@ export const typeMap = {
   uint256: 'int',
 };
 
-export default class EOSContract {
+export default class RSNContract {
   constructor(abi, account = undefined) {
     this.account = account;
     this.abi = abi;
@@ -32,14 +32,14 @@ export default class EOSContract {
   }
 
   tx(actionName, account, data) {
-    const eos = Eos({
+    const rsn = Rsn({
       broadcast: false,
       expireInSeconds: 3600,
       forceActionDataHex: false,
       httpEndpoint: null,
       sign: false
     });
-    return eos.transaction({
+    return rsn.transaction({
       actions: [
         {
           account: this.account,

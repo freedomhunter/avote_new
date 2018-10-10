@@ -1,7 +1,7 @@
 import * as types from '../../types';
 
 import { getTable } from '../../table';
-import eos from '../../helpers/eos';
+import rsn from '../../helpers/rsn';
 
 export function setregproxyinfo(data) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function setregproxyinfo(data) {
 
     const { account } = settings;
 
-    return eos(connection, true).transaction({
+    return rsn(connection, true).transaction({
       actions: [
         {
           account: 'regproxyinfo',
@@ -57,7 +57,7 @@ export function removeregproxyinfo() {
 
     const { account } = settings;
 
-    return eos(connection, true).transaction({
+    return rsn(connection, true).transaction({
       actions: [
         {
           account: 'regproxyinfo',

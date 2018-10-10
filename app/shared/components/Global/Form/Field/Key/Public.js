@@ -5,7 +5,7 @@ import { Form, Input } from 'semantic-ui-react';
 
 import debounce from 'lodash/debounce';
 
-const ecc = require('eosjs-ecc');
+const ecc = require('arisenjs-ecc');
 
 class GlobalFormFieldKeyPublic extends Component<Props> {
   constructor(props) {

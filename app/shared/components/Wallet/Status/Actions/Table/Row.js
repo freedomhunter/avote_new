@@ -72,7 +72,7 @@ class WalletStatusActionsTableRow extends Component<Props> {
     const {
       authorization
     } = act;
-    const mentionedInReceiverField = [settings.account, 'eosio'].indexOf(receipt.receiver) === -1;
+    const mentionedInReceiverField = [settings.account, 'arisen'].indexOf(receipt.receiver) === -1;
 
     const permissionActors = authorization.map((permission) => permission.actor);
     const mentionedInActObject =

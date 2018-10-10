@@ -2,7 +2,7 @@ import { Decimal } from 'decimal.js';
 
 import * as types from './types';
 import * as AccountActions from './accounts';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 import { delegatebwParams } from './system/delegatebw';
 
@@ -25,7 +25,7 @@ export function createAccount(
 
     dispatch({ type: types.SYSTEM_CREATEACCOUNT_PENDING });
 
-    return eos(connection, true).transaction(tr => {
+    return rsn(connection, true).transaction(tr => {
       tr.newaccount({
         creator: currentAccount,
         name: accountName,

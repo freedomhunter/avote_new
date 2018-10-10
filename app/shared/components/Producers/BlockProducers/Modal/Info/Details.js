@@ -110,7 +110,7 @@ class ProducersModalInfoDetails extends Component<Props> {
           {t('producer_info_description')}
           <DangerLink
             content={t('producer_info_description_more')}
-            link="https://steemit.com/eos/@greymass/an-eos-smart-contract-for-block-producer-information"
+            link="https://dsocial.io/arisen/@arisen/an-arisen-smart-contract-for-block-producer-information"
             settings={settings}
           />
         </p>

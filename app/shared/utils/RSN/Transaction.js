@@ -1,4 +1,4 @@
-export default class EOSTransaction {
+export default class RSNTransaction {
   constructor(transaction) {
     this.contract = transaction.contract;
     this.transaction = transaction.data;

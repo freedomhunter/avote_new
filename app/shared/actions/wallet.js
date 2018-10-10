@@ -1,9 +1,9 @@
 import * as types from './types';
 import { setSetting } from './settings';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 const CryptoJS = require('crypto-js');
-const ecc = require('eosjs-ecc');
+const ecc = require('rsnjs-ecc');
 
 export function setWalletKey(data, password, mode = 'hot', existingHash = false) {
   return (dispatch: () => void, getState) => {
@@ -121,7 +121,7 @@ export function unlockWallet(password, useWallet = false) {
     }
     let account = accounts[wallet.account];
     if (settings.walletMode === 'hot' && !account) {
-      account = await eos(connection).getAccount(wallet.account);
+      account = await rsn(connection).getAccount(wallet.account);
     }
     dispatch({
       type: types.VALIDATE_WALLET_PASSWORD_PENDING

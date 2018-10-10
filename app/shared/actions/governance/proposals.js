@@ -2,11 +2,11 @@ import concat from 'lodash/concat';
 import sortBy from 'lodash/sortBy';
 
 import * as types from '../types';
-import eos from '../helpers/eos';
+import rsn from '../helpers/rsn';
 
-const defaultContract = 'eosforumrcpp';
+const defaultContract = 'rsnforumrcpp';
 
-export function getProposals(scope = 'eosforumdapp', previous = false) {
+export function getProposals(scope = 'rsnforumdapp', previous = false) {
   return (dispatch: () => void, getState) => {
     dispatch({
       type: types.SYSTEM_GOVERNANCE_GET_PROPOSALS_PENDING
@@ -22,7 +22,7 @@ export function getProposals(scope = 'eosforumdapp', previous = false) {
     if (previous) {
       query.lower_bound = previous[previous.length - 1].proposal_name;
     }
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       // If previous rows were returned
       if (previous) {
@@ -88,7 +88,7 @@ export function getVoteInfo(scope, account) {
       type: types.SYSTEM_GOVERNANCE_GET_PROPOSALVOTES_PENDING
     });
     const { connection } = getState();
-    const formatted = eos(connection).modules.format.encodeNameHex(account, true)
+    const formatted = rsn(connection).modules.format.encodeNameHex(account, true)
     const lower_bound = formatBounds(formatted);
     const upper_bound = formatBounds(formatted, 'F');
     const query = {
@@ -102,7 +102,7 @@ export function getVoteInfo(scope, account) {
       lower_bound,
       upper_bound
     };
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       const votes = rows
         .map((data) => {
@@ -153,7 +153,7 @@ export function unvoteProposal(scope, voter, proposal_name) {
     });
     const { connection, settings } = getState();
     const { account } = settings;
-    return eos(connection, true).transaction({
+    return rsn(connection, true).transaction({
       actions: [
         {
           account: defaultContract,
@@ -194,7 +194,7 @@ export function voteProposal(scope, voter, proposal_name, vote, vote_json) {
     });
     const { connection, settings } = getState();
     const { account } = settings;
-    return eos(connection, true).transaction({
+    return rsn(connection, true).transaction({
       actions: [
         {
           account: defaultContract,
