@@ -7,7 +7,7 @@ import GlobalAccountDropdown from '../containers/Global/Account/Dropdown';
 import WalletLanguage from './Wallet/Language';
 import WalletLockState from './Wallet/LockState';
 import WalletMode from './Wallet/Mode';
-import logo from '../../renderer/assets/images/arisenio.png';
+import logo from '../../renderer/assets/images/rsn.png';
 
 class TabMenu extends Component<Props> {
   render() {

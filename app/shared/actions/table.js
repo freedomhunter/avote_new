@@ -1,7 +1,7 @@
 import concat from 'lodash/concat';
 
 import * as types from './types';
-import eos from './helpers/eos';
+import rsn from './helpers/rsn';
 
 export function getTable(code, scope, table, limit = 1000, index = false, previous = false) {
   return (dispatch: () => void, getState) => {
@@ -18,11 +18,11 @@ export function getTable(code, scope, table, limit = 1000, index = false, previo
     };
     if (index && previous) {
       // Adding a space in front of every lower bounds
-      //   related: https://github.com/EOSIO/eos/issues/4442
+      //   related: https://github.com/ARISENIO/arisen/issues/4442
       query.lower_bound = ` ${previous[previous.length - 1][index]}`;
       query.table_key = index;
     }
-    eos(connection).getTableRows(query).then((results) => {
+    rsn(connection).getTableRows(query).then((results) => {
       const { more } = results;
       let { rows } = results;
       // If previous rows were returned
