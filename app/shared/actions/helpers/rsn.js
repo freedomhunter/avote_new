@@ -1,8 +1,8 @@
 import { decrypt } from '../wallet';
 
 const CryptoJS = require('crypto-js');
-const ecc = require('rsnjs-ecc');
-const Rsn = require('rsnjs');
+const ecc = require('arisenjs-ecc');
+const Rsn = require('arisenjs');
 
 export default function rsn(connection, signing = false) {
   const decrypted = Object.assign({}, connection);

@@ -3,7 +3,7 @@ import * as types from './types';
 import * as chain from './chain';
 import rsn from './helpers/rsn';
 
-const ecc = require('rsnjs-ecc');
+const ecc = require('arisenjs-ecc');
 
 export function validateAccount(account) {
   return (dispatch: () => void, getState) => {

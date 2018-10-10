@@ -3,7 +3,7 @@ import { setSetting } from './settings';
 import rsn from './helpers/rsn';
 
 const CryptoJS = require('crypto-js');
-const ecc = require('rsnjs-ecc');
+const ecc = require('arisenjs-ecc');
 
 export function setWalletKey(data, password, mode = 'hot', existingHash = false) {
   return (dispatch: () => void, getState) => {
