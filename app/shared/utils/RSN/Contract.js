@@ -1,6 +1,6 @@
 import { forOwn, find, map, pick } from 'lodash';
 
-const Rsn = require('arisenjs');
+const Rsn = require('arisenjsv1');
 
 export const typeMap = {
   bool: 'bool',
