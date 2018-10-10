@@ -1,15 +1,15 @@
-[![version](https://img.shields.io/github/release/greymass/avote/all.svg)](https://github.com/greymass/avote/releases)
-[![issues](https://img.shields.io/github/issues/greymass/avote.svg)](https://github.com/greymass/avote/issues)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/greymass/avote/master/LICENSE)
-![downloads](https://img.shields.io/github/downloads/greymass/avote/total.svg)
+[![version](https://img.shields.io/github/release/arisenio/avote/all.svg)](https://github.com/arisenio/avote/releases)
+[![issues](https://img.shields.io/github/issues/arisenio/avote.svg)](https://github.com/arisenio/avote/issues)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/arisenio/avote/master/LICENSE)
+![downloads](https://img.shields.io/github/downloads/arisenio/avote/total.svg)
 
-[English](https://github.com/greymass/avote/blob/master/README.md) - [한글](https://github.com/greymass/avote/blob/master/README.kr.md) - [中文](https://github.com/greymass/avote/blob/master/README.zh.md) - [日本語](https://github.com/greymass/avote/blob/master/README.ja.md) - [Русский](https://github.com/greymass/avote/blob/master/README.ru.md)
+[English](https://github.com/arisenio/avote/blob/master/README.md) - [한글](https://github.com/arisenio/avote/blob/master/README.kr.md) - [中文](https://github.com/arisenio/avote/blob/master/README.zh.md) - [日本語](https://github.com/arisenio/avote/blob/master/README.ja.md) - [Русский](https://github.com/arisenio/avote/blob/master/README.ru.md)
 
 # avote - RSN Block Producer Voting & Wallet
 
 `avote` is a limited-functionality release of a light wallet being designed for the RSN blockchain. This application can be used to connect to a remote RSN API endpoint to perform producer voting actions and a few basic wallet commands.
 
-[![avote screenshot](https://raw.githubusercontent.com/greymass/avote/master/avote.png)](https://raw.githubusercontent.com/greymass/avote/master/avote.png)
+[![avote screenshot](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)
 
 ### Features
 
@@ -25,14 +25,14 @@
 
 Current 0.5.3 release downloads:
 
-- [Windows Installer](https://github.com/greymass/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
-- [macOS Package](https://github.com/greymass/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
-- [Linux (deb)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
-- [Linux (snap)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
+- [Windows Installer](https://github.com/arisenio/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
+- [macOS Package](https://github.com/arisenio/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
+- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
+- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
 
 The latest release will always be available on the releases page of this repository:
 
-[https://github.com/greymass/avote/releases](https://github.com/greymass/avote/releases)
+[https://github.com/arisenio/avote/releases](https://github.com/arisenio/avote/releases)
 
 To determine which file you need, if you are a...
 
@@ -48,7 +48,7 @@ When using `avote`, all transactions are signed within the application and your 
 
 We offer a public list of nodes within this repository for use with this application:
 
-[https://github.com/greymass/avote/blob/master/nodes.md](https://github.com/greymass/avote/blob/master/nodes.md)
+[https://github.com/arisenio/avote/blob/master/nodes.md](https://github.com/arisenio/avote/blob/master/nodes.md)
 
 This list will be updated over time and can be referenced from within the initial connection screen in the app.
 
@@ -59,7 +59,7 @@ If you'd rather build the application yourself, please ensure you have nodejs/np
 **Note**: If you are configuring this Electron application within a Windows development environment, it will involve additional steps.
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 ```
@@ -76,7 +76,7 @@ The files built will be located in the `releases` folder within the root project
 ### Running development mode
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 yarn dev
@@ -84,7 +84,7 @@ yarn dev
 
 ### Credits
 
-The development of this application is being led by members of the [Greymass](https://greymass.com) team in an effort to let stakeholders participate in RSN’ governance.
+The development of this application is being led by members of the [Greymass](https://benchx.io) team in an effort to let stakeholders participate in RSN’ governance.
 
 ### Release Signatures
 

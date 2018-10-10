@@ -1,15 +1,15 @@
-[![version](https://img.shields.io/github/release/greymass/avote/all.svg)](https://github.com/greymass/avote/releases)
-[![issues](https://img.shields.io/github/issues/greymass/avote.svg)](https://github.com/greymass/avote/issues)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/greymass/avote/master/LICENSE)
-![downloads](https://img.shields.io/github/downloads/greymass/avote/total.svg)
+[![version](https://img.shields.io/github/release/arisenio/avote/all.svg)](https://github.com/arisenio/avote/releases)
+[![issues](https://img.shields.io/github/issues/arisenio/avote.svg)](https://github.com/arisenio/avote/issues)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/arisenio/avote/master/LICENSE)
+![downloads](https://img.shields.io/github/downloads/arisenio/avote/total.svg)
 
-[English](https://github.com/greymass/avote/blob/master/README.md) - [한글](https://github.com/greymass/avote/blob/master/README.kr.md) - [中文](https://github.com/greymass/avote/blob/master/README.zh.md) - [日本語](https://github.com/greymass/avote/blob/master/README.ja.md)
+[English](https://github.com/arisenio/avote/blob/master/README.md) - [한글](https://github.com/arisenio/avote/blob/master/README.kr.md) - [中文](https://github.com/arisenio/avote/blob/master/README.zh.md) - [日本語](https://github.com/arisenio/avote/blob/master/README.ja.md)
 
 # avote - RSN 超级节点投票器 & 钱包
 
 `avote` 是一款为RSN区块链设计的轻量级钱包的有限功能版本。此程序用于连接到远程RSN API节点来执行超级节点投票操作和一些基本钱包命令。
 
-[![avote screenshot](https://raw.githubusercontent.com/greymass/avote/master/avote.png)](https://raw.githubusercontent.com/greymass/avote/master/avote.png)
+[![avote screenshot](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)
 
 ### 功能
 
@@ -25,14 +25,14 @@
 
 当前版本 0.5.3 可供下载:
 
-- [Windows Installer](https://github.com/greymass/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
-- [macOS Package](https://github.com/greymass/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
-- [Linux (deb)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
-- [Linux (snap)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
+- [Windows Installer](https://github.com/arisenio/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
+- [macOS Package](https://github.com/arisenio/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
+- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
+- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
 
 最新的版本将在此REPO的发布页面中找到：
 
-[https://github.com/greymass/avote/releases](https://github.com/greymass/avote/releases)
+[https://github.com/arisenio/avote/releases](https://github.com/arisenio/avote/releases)
 
 以下用来决定你需要下载哪一个版本, 如果你是...
 
@@ -48,7 +48,7 @@
 
 我们在程序中内置了以下REPO中提供的公共节点:
 
-[https://github.com/greymass/avote/blob/master/nodes.md](https://github.com/greymass/avote/blob/master/nodes.md)
+[https://github.com/arisenio/avote/blob/master/nodes.md](https://github.com/arisenio/avote/blob/master/nodes.md)
 
 该节点列表将被实时更新，并在程序初始化时被调用。
 
@@ -59,7 +59,7 @@
 **注意**: 如果你是在Windows环境下编译Electron应用，你还应做如下操作:
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 ```
@@ -76,7 +76,7 @@ yarn install
 ### 调试模式运行
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 yarn dev
@@ -84,7 +84,7 @@ yarn dev
 
 ### 声明
 
-该应用由[Greymass](https://greymass.com)团队领导开发，用于帮助RSN持有人参与RSN的治理。
+该应用由[Greymass](https://benchx.io)团队领导开发，用于帮助RSN持有人参与RSN的治理。
 
 ### Release Signatures
 

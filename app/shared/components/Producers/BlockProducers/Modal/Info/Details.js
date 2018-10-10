@@ -7,7 +7,7 @@ import { get } from 'dot-prop-immutable';
 import DangerLink from '../../../../Global/Modal/DangerLink';
 
 import KeybaseImage from '../../../../../../renderer/assets/images/keybase.png';
-import SteemitImage from '../../../../../../renderer/assets/images/steem.png';
+import DSiteImage from '../../../../../../renderer/assets/images/dpay.png';
 import WechatImage from '../../../../../../renderer/assets/images/wechat.png';
 
 class ProducersModalInfoDetails extends Component<Props> {
@@ -22,7 +22,7 @@ class ProducersModalInfoDetails extends Component<Props> {
       github: 'https://github.com/__ID__',
       keybase: 'https://keybase.io/__ID__',
       reddit: 'https://reddit.com/u/__ID__',
-      steemit: 'https://steemit.com/@__ID__',
+      dpay: 'https://dsocial.io/@__ID__',
       telegram: 'https://t.me/__ID__',
       twitter: 'https://twitter.com/__ID__',
       youtube: 'https://youtube.com/__ID__',
@@ -48,13 +48,13 @@ class ProducersModalInfoDetails extends Component<Props> {
     if (identifier) {
       const link = (links[platform]) ? links[platform].replace('__ID__', identifier) : false;
       switch (platform) {
-        case 'steemit': {
+        case 'dpay': {
           icon = (
             <span style={imageIconMatch}>
               <Image
                 height={21}
                 inline
-                src={SteemitImage}
+                src={DSiteImage}
               />
             </span>
           );
@@ -146,7 +146,7 @@ class ProducersModalInfoDetails extends Component<Props> {
               {t('producers_info_social')}
             </Header>
             <div>
-              {this.socialLink('steemit')}
+              {this.socialLink('dpay')}
               {this.socialLink('twitter')}
               {this.socialLink('youtube')}
               {this.socialLink('facebook')}

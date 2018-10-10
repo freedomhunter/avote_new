@@ -1,15 +1,15 @@
-[![version](https://img.shields.io/github/release/greymass/avote/all.svg)](https://github.com/greymass/avote/releases)
-[![issues](https://img.shields.io/github/issues/greymass/avote.svg)](https://github.com/greymass/avote/issues)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/greymass/avote/master/LICENSE)
-![downloads](https://img.shields.io/github/downloads/greymass/avote/total.svg)
+[![version](https://img.shields.io/github/release/arisenio/avote/all.svg)](https://github.com/arisenio/avote/releases)
+[![issues](https://img.shields.io/github/issues/arisenio/avote.svg)](https://github.com/arisenio/avote/issues)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/arisenio/avote/master/LICENSE)
+![downloads](https://img.shields.io/github/downloads/arisenio/avote/total.svg)
 
-[English](https://github.com/greymass/avote/blob/master/README.md) - [한글](https://github.com/greymass/avote/blob/master/README.kr.md) - [中文](https://github.com/greymass/avote/blob/master/README.zh.md) - [日本語](https://github.com/greymass/avote/blob/master/README.ja.md)
+[English](https://github.com/arisenio/avote/blob/master/README.md) - [한글](https://github.com/arisenio/avote/blob/master/README.kr.md) - [中文](https://github.com/arisenio/avote/blob/master/README.zh.md) - [日本語](https://github.com/arisenio/avote/blob/master/README.ja.md)
 
 # avote - RSNブロックプロデューサ投票 & ウォレット
 
 `avote`はRSNブロックチェーン用に設計されたライトウォレットの機能限定リリースです。このアプリケーションはRSNのリモートAPIエンドポイントに接続し、プロデューサ投票の操作と、いくつかの基本的なウォレットコマンドを実行できます。
 
-[![avote screenshot](https://raw.githubusercontent.com/greymass/avote/master/avote.png)](https://raw.githubusercontent.com/greymass/avote/master/avote.png)
+[![avote screenshot](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)
 
 ### 機能
 
@@ -25,14 +25,14 @@
 
 現在の 0.5.3 リリースのダウンロード：
 
-- [Windowsインストーラ](https://github.com/greymass/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
-- [macOSパッケージ](https://github.com/greymass/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
-- [Linux (deb)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
-- [Linux (snap)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
+- [Windowsインストーラ](https://github.com/arisenio/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
+- [macOSパッケージ](https://github.com/arisenio/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
+- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.deb)
+- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
 
 最新のリリースはこのリポジトリのリリースページでいつでも利用可能です:
 
-[https://github.com/greymass/avote/releases](https://github.com/greymass/avote/releases)
+[https://github.com/arisenio/avote/releases](https://github.com/arisenio/avote/releases)
 
 どのファイルが必要かを決めるには、...
 
@@ -48,7 +48,7 @@
 
 このアプリケーションを使用するために、このリポジトリ内でノードのリストを公開しています:
 
-[https://github.com/greymass/avote/blob/master/nodes.md](https://github.com/greymass/avote/blob/master/nodes.md)
+[https://github.com/arisenio/avote/blob/master/nodes.md](https://github.com/arisenio/avote/blob/master/nodes.md)
 
 このリストは時間とともに更新され、アプリケーションの初期画面から参照することができます。
 
@@ -59,7 +59,7 @@
 **注**: Windows開発環境でこのElectronアプリケーションを構成する場合は、追加の手順が必要です。
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 ```
@@ -76,7 +76,7 @@ yarn install
 ### 開発者モードで実行
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 yarn dev
@@ -84,7 +84,7 @@ yarn dev
 
 ### クレジット
 
-このアプリケーションの開発は、ステークホルダーがRSNのガバナンスに参加できるようにするために、[Greymass](https://greymass.com)チームが主導しています。
+このアプリケーションの開発は、ステークホルダーがRSNのガバナンスに参加できるようにするために、[Greymass](https://benchx.io)チームが主導しています。
 
 ### Release Signatures
 

@@ -15,7 +15,7 @@ If you are concerned about revealing this information to any of these 3rd party 
 
 # Arisen Peer List
 
-- https://rsn.greymass.com - operated by [greymass](https://greymass.com)
+- https://rsn.benchx.com - operated by [benchx](https://benchx.io)
 
 
 ### Additions

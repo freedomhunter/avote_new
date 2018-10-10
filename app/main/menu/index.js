@@ -95,9 +95,9 @@ export default class MenuBuilder {
     const subMenuHelp = {
       label: 'Help',
       submenu: [
-        { label: 'Source Code (Github)', click() { shell.openExternal('https://github.com/greymass/avote'); } },
-        { label: 'Report Bug (Github)', click() { shell.openExternal('https://github.com/greymass/avote/issues'); } },
-        { label: 'Releases (Github)', click() { shell.openExternal('https://github.com/greymass/avote/releases'); } },
+        { label: 'Source Code (Github)', click() { shell.openExternal('https://github.com/arisenio/avote'); } },
+        { label: 'Report Bug (Github)', click() { shell.openExternal('https://github.com/arisenio/avote/issues'); } },
+        { label: 'Releases (Github)', click() { shell.openExternal('https://github.com/arisenio/avote/releases'); } },
         { type: 'separator' },
         { label: 'Check for Updates', click: (menuItem, browserWindow) => { checkForUpdates(menuItem, browserWindow); } }
       ]
@@ -167,9 +167,9 @@ export default class MenuBuilder {
     }, {
       label: 'Help',
       submenu: [
-        { label: 'Source Code (Github)', click() { shell.openExternal('https://github.com/greymass/avote'); } },
-        { label: 'Report Bug (Github)', click() { shell.openExternal('https://github.com/greymass/avote/issues'); } },
-        { label: 'Releases (Github)', click() { shell.openExternal('https://github.com/greymass/avote/releases'); } },
+        { label: 'Source Code (Github)', click() { shell.openExternal('https://github.com/arisenio/avote'); } },
+        { label: 'Report Bug (Github)', click() { shell.openExternal('https://github.com/arisenio/avote/issues'); } },
+        { label: 'Releases (Github)', click() { shell.openExternal('https://github.com/arisenio/avote/releases'); } },
         { type: 'separator' },
         { label: 'Check Updates...', click: (menuItem, browserWindow) => { checkForUpdates(menuItem, browserWindow); } }
       ]

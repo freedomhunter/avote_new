@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Divider, Grid, Header, Image, Segment } from 'semantic-ui-react';
 import { I18n } from 'react-i18next';
 
-import logo from '../../renderer/assets/images/greymasstext.png';
+import logo from '../../renderer/assets/images/ariseniotext.png';
 import GlobalButtonResetContainer from '../containers/Global/Button/Reset';
 
 const { shell } = require('electron');
@@ -55,15 +55,15 @@ export default class About extends Component<Props> {
                   <Segment>
                     <Image src={logo} alt="Greymass" />
                     <Segment basic padded>
-                      <p>{t('about_greymass_message_1')}</p>
+                      <p>{t('about_benchx_message_1')}</p>
                       <p>
-                        {t('about_greymass_message_2')}
+                        {t('about_benchx_message_2')}
                         {' '}
                         <a
-                          onClick={() => this.openLink('https://greymass.com')}
+                          onClick={() => this.openLink('https://benchx.io')}
                           role="button"
                         >
-                          https://greymass.com
+                          https://benchx.io
                         </a>.
                       </p>
                     </Segment>

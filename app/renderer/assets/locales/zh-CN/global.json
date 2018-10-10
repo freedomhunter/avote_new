@@ -22,7 +22,7 @@
   "error_invalid_background": "Invalid Background value, must be less than 256 Bytes.",
   "error_invalid_philosophy": "Invalid Philosophy value, must be less than 256 Bytes.",
   "error_invalid_wechat": "Invalid Wechat username, must be less than 256 Bytes.",
-  "error_invalid_steemit": "Invalid Steemit username, must be less than 256 Bytes.",
+  "error_invalid_dpay": "Invalid dPay username, must be less than 256 Bytes.",
   "error_invalid_telegram": "Invalid Telegram group, must be less than 256 Bytes.",
   "error_no_stake_left": "Unable to set staked amount to 0. Doing so would prevent you from performing any transactions on the network.",
   "error_not_enough_balance": "Insufficient available RSN balance to complete transaction.",

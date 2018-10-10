@@ -1,15 +1,15 @@
-[![version](https://img.shields.io/github/release/greymass/avote/all.svg)](https://github.com/greymass/avote/releases)
-[![issues](https://img.shields.io/github/issues/greymass/avote.svg)](https://github.com/greymass/avote/issues)
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/greymass/avote/master/LICENSE)
-![downloads](https://img.shields.io/github/downloads/greymass/avote/total.svg)
+[![version](https://img.shields.io/github/release/arisenio/avote/all.svg)](https://github.com/arisenio/avote/releases)
+[![issues](https://img.shields.io/github/issues/arisenio/avote.svg)](https://github.com/arisenio/avote/issues)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/arisenio/avote/master/LICENSE)
+![downloads](https://img.shields.io/github/downloads/arisenio/avote/total.svg)
 
-[English](https://github.com/greymass/avote/blob/master/README.md) - [한글](https://github.com/greymass/avote/blob/master/README.kr.md) - [中文](https://github.com/greymass/avote/blob/master/README.zh.md) - [日本語](https://github.com/greymass/avote/blob/master/README.ja.md)
+[English](https://github.com/arisenio/avote/blob/master/README.md) - [한글](https://github.com/arisenio/avote/blob/master/README.kr.md) - [中文](https://github.com/arisenio/avote/blob/master/README.zh.md) - [日本語](https://github.com/arisenio/avote/blob/master/README.ja.md)
 
 # avote - RSN 블록 생산자 투표 및 지갑
 
 `avote` 는 RSN 블록 체인을 위해 한정된 기능을 갖춘 라이트 지갑입니다. 이 프로그램을 사용하여 원격 RSN API 끝점에 연결할 수 있고, 블록생산자 투표 작업 및 몇 가지 기본 지갑 명령을 수행 할 수 있습니다.
 
-[![avote screenshot](https://raw.githubusercontent.com/greymass/avote/master/avote.png)](https://raw.githubusercontent.com/greymass/avote/master/avote.png)
+[![avote screenshot](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)
 
 ### 특징
 
@@ -25,14 +25,14 @@
 
 현재 0.5.3 버전 다운로드 :
 
-- [Windows 사용자](https://github.com/greymass/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
-- [macOS 사용자](https://github.com/greymass/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
-- [Linux 사용자 (deb)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
-- [Linux 사용자 (snap)](https://github.com/greymass/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
+- [Windows 사용자](https://github.com/arisenio/avote/releases/download/v0.5.3/win-avote-0.5.3.exe)
+- [macOS 사용자](https://github.com/arisenio/avote/releases/download/v0.5.3/mac-avote-0.5.3.dmg)
+- [Linux 사용자 (deb)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
+- [Linux 사용자 (snap)](https://github.com/arisenio/avote/releases/download/v0.5.3/linux-avote-0.5.3-amd64.snap)
 
 최신 버전은 항상이 저장소의 릴리스 페이지에서 제공됩니다:
 
-[https://github.com/greymass/avote/releases](https://github.com/greymass/avote/releases)
+[https://github.com/arisenio/avote/releases](https://github.com/arisenio/avote/releases)
 
 필요한 파일을 결정하시려면,...
 
@@ -51,7 +51,7 @@
 **주**: Windows 개발 환경에서이 Electron 어플리케이션을 구성하는 경우 추가 단계가 필요합니다.
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 ```
@@ -68,7 +68,7 @@ yarn install
 ### 개발 모드
 
 ```
-git clone https://github.com/greymass/avote.git avote
+git clone https://github.com/arisenio/avote.git avote
 cd avote
 yarn install
 yarn dev
@@ -76,7 +76,7 @@ yarn dev
 
 ### 협찬
 
-이 프로그램의 개발은 [Greymass](https://greymass.com) 팀 구성원이 이끌어 내며 이해 관계자가 RSN의 지배 구조에 참여할 수 있도록 노력하고 있습니다.
+이 프로그램의 개발은 [Greymass](https://benchx.io) 팀 구성원이 이끌어 내며 이해 관계자가 RSN의 지배 구조에 참여할 수 있도록 노력하고 있습니다.
 
 ### Release Signatures
 

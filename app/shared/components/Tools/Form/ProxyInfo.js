@@ -11,7 +11,7 @@ import GlobalFormFieldUrl from '../../Global/Form/Field/Url';
 import ToolsFormProxyInfoConfirming from './ProxyInfo/Confirming';
 
 const formAttributes = [
-  'proxy', 'name', 'slogan', 'philosophy', 'background', 'website', 'logo_256', 'telegram', 'steemit', 'twitter', 'wechat'
+  'proxy', 'name', 'slogan', 'philosophy', 'background', 'website', 'logo_256', 'telegram', 'dpay', 'twitter', 'wechat'
 ];
 
 const urlFields = ['logo_256', 'website'];

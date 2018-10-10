@@ -22,7 +22,7 @@
   "error_invalid_background": "Invalid Background value, must be less than 256 Bytes.",
   "error_invalid_philosophy": "Invalid Philosophy value, must be less than 256 Bytes.",
   "error_invalid_wechat": "Invalid Wechat username, must be less than 256 Bytes.",
-  "error_invalid_steemit": "Invalid Steemit username, must be less than 256 Bytes.",
+  "error_invalid_dpay": "Invalid dPay username, must be less than 256 Bytes.",
   "error_invalid_telegram": "Invalid Telegram group, must be less than 256 Bytes.",
   "error_no_stake_left": "스테이크 된 금액을 0으로 설정할 수 없습니다. 이렇게하면 네트워크에서 거래를 중단 될 수 있습니다.",
   "error_not_enough_balance": "사용할 수있는 RSN 잔액이 부족합니다.",
