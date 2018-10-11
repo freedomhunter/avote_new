@@ -1,6 +1,6 @@
 {
-  "transfer_send_button_cta": "Send Tokens",
-  "transfer_receive_button_cta": "Receive Tokens",
+  "transfer_send_button_cta": "Send Currency",
+  "transfer_receive_button_cta": "Receive Currency",
   "transfer_modal_title": "转让令牌",
   "transfer_modal_transaction_successful_title": "令牌转让成功！",
   "transfer_modal_transaction_successful_message": "请求的交易已处理,交易ID可以在下面找到.",
@@ -13,10 +13,10 @@
   "transfer_label_quantity": "数量",
   "transfer_label_token_and_quantity": "令牌选择+数量",
   "transfer_label_memo": "传送备忘录",
-  "transfer_receive_modal_header": "Receive Tokens",
-  "transfer_receive_body_text": "To receive tokens simply give the following account name to the sender.",
+  "transfer_receive_modal_header": "Receive Currency",
+  "transfer_receive_body_text": "To receive private currency simply give the following bank account name to the sender.",
   "transfer_close": "Close",
   "transfer_header_available": "available to transfer.",
   "transfer_send_exchange_in_memo_one": "Are you trying to transfer to an exchange? If so put",
-  "transfer_send_exchange_in_memo_two": "as the Account Name and put the memo code given in the memo field."
+  "transfer_send_exchange_in_memo_two": "as the bank account name and put the memo code given in the memo field."
 }

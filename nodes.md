@@ -1,17 +1,17 @@
-## API Node Recommendations
+## Decentralized banking network node Recommendations
 
-`aVote` is a light wallet, which means it relies on an external API node connected to the Arisen blockchain network in order to function.
+`aVote` is a light wallet, which means it relies on an external Decentralized banking network node connected to the Arisen blockchain network in order to function.
 
-The list below contains Arisen API nodes run by members of the Arisen community that you can choose from.
+The list below contains Arisen Decentralized banking network nodes run by members of the Arisen community that you can choose from.
 
 ### Privacy
 
-Even though your keys never leave the `aVote` applications, the API node you connect to can still reveal personally identifiable information about you. This information may include:
+Even though your keys never leave the `aVote` applications, the Decentralized banking network node you connect to can still reveal personally identifiable information about you. This information may include:
 
 - Account Names
 - IP Addresses
 
-If you are concerned about revealing this information to any of these 3rd party API nodes, it is recommended you run your own API Node and connect to that.
+If you are concerned about revealing this information to any of these 3rd party Decentralized banking network nodes, it is recommended you run your own Decentralized banking network node and connect to that.
 
 # Arisen Peer List
 

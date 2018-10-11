@@ -30,7 +30,7 @@ export default function connection(state = initialState, action) {
         httpEndpoint: action.payload.node
       });
     }
-    // Remove key from connection if the wallet is locked/removed
+    // Remove key from connection if the bank account is locked/removed
     case types.WALLET_LOCK: {
       return Object.assign({}, state, {
         authorization: undefined,
@@ -38,7 +38,7 @@ export default function connection(state = initialState, action) {
         keyProviderObfuscated: {}
       });
     }
-    // Cold Wallet: increase expiration to 1hr, disable broadcast, enable sign
+    // BankVault: increase expiration to 1hr, disable broadcast, enable sign
     case types.SET_WALLET_COLD: {
       return Object.assign({}, state, {
         broadcast: false,
@@ -47,7 +47,7 @@ export default function connection(state = initialState, action) {
         sign: true
       });
     }
-    // Watch Wallet: increase expiration to 1hr, enable broadcast, disable sign
+    // RoboBanker: increase expiration to 1hr, enable broadcast, disable sign
     case types.SET_WALLET_WATCH: {
       return Object.assign({}, state, {
         broadcast: false,
@@ -56,7 +56,7 @@ export default function connection(state = initialState, action) {
         sign: false
       });
     }
-    // Hot Wallet: set expire to 2 minutes, enable broadcast, enable sign
+    // HotBank: set expire to 2 minutes, enable broadcast, enable sign
     case types.SET_WALLET_HOT: {
       return Object.assign({}, state, {
         broadcast: true,

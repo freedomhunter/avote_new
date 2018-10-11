@@ -48,9 +48,9 @@ class WelcomeConnectionContainer extends Component<Props> {
     const {
       setWalletMode
     } = actions;
-    // Immediately set the wallet into cold storage mode
+    // Immediately set the bank account into cold storage mode
     setWalletMode('cold');
-    // Move to account stage
+    // Move to bank account stage
     onStageSelect(2);
     e.preventDefault();
     return false;

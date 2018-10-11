@@ -38,7 +38,7 @@ class Producers extends Component<Props> {
       this.props.actions.getGlobals();
       this.tick();
     }
-    // Update state when the transaction has gone through
+    // Update state when the bank transaction has gone through
     if (
       this.state.submitting
       && (

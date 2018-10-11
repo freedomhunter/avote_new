@@ -64,7 +64,7 @@ class GlobalTransactionModal extends Component<Props> {
     const {
       open
     } = this.state;
-    // Load the transaction from props by default, but overwrite
+    // Load the bank transaction from props by default, but overwrite
     //   with last transaction from the system if exists
     if (system && system[`${actionName}_LAST_TRANSACTION`]) {
       transaction = system[`${actionName}_LAST_TRANSACTION`];

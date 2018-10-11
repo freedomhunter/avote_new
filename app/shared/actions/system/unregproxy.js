@@ -18,7 +18,7 @@ export function unregproxy() {
       proxy: account,
       isproxy: 0
     }).then((tx) => {
-      // Refresh the account
+      // Refresh the bank account
       setTimeout(dispatch(getAccount(account)), 500);
       return dispatch({
         payload: { tx },

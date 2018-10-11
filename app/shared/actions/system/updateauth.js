@@ -24,7 +24,7 @@ export function updateauth(permission, parent, auth, authorizationOverride = fal
       authorization,
       forceActionDataHex: false,
     }).then((tx) => {
-      // Refresh the account
+      // Refresh the bank account
       setTimeout(dispatch(getAccount(account)), 500);
       return dispatch({
         payload: { tx },

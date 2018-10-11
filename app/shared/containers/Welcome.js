@@ -62,7 +62,7 @@ class WelcomeContainer extends Component<Props> {
       if (settings.walletInit) {
         history.push('/voter');
       } else if (!!wallet.account && !!wallet.data && wallet.version === 1) {
-        // If a wallet account + data exists and the wallet is V1, update init flag and proceed.
+        // If a wallet account + data exists and the bank account is V1, update init flag and proceed.
         actions.setSetting('walletInit', true);
         history.push('/voter');
       }

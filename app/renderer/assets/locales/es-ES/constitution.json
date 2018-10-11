@@ -1,6 +1,6 @@
 {
   "constitution_accept": "Acepto estos términos",
-  "constitution_title": "RSN Governance - Constitution",
+  "constitution_title": "The United Chains Constitution",
   "constitution_preface": "Esta Constitución es un contrato multipartidista de los miembros en virtud de su uso de este blockchain.",
   "constitution_article_01_title": "Artículo I - No iniciación de la violencia",
   "constitution_article_01_body": "Los miembros no deben iniciar la violencia o la amenaza de violencia contra otro miembro. Persecución legal de delitos con el objetivo de preservar la vida, libertad y propiedad no constituye iniciación de la violencia.",
@@ -31,15 +31,15 @@
   "constitution_article_14_title": "Artículo XIV - Separabilidad",
   "constitution_article_14_body": "If any part of this Constitution is declared unenforceable or invalid, the remainder will continue to be valid and enforceable.",
   "constitution_article_15_title": "Article XV - Termination of Agreement",
-  "constitution_article_15_body": "A Member is automatically released from all revocable obligations under this Constitution 3 years after the last transaction signed by that Member is incorporated into the blockchain. After 3 years of inactivity an account may be put up for auction and the proceeds distributed to all Members according to the system contract provisions then in effect for such redistribution.",
+  "constitution_article_15_body": "A Member is automatically released from all revocable obligations under this Constitution 3 years after the last transaction signed by that Member is incorporated into the decentralized banking network. After 3 years of inactivity an account may be put up for auction and the proceeds distributed to all Members according to the system contract provisions then in effect for such redistribution.",
   "constitution_article_16_title": "Article XVI - Developer Liability",
   "constitution_article_16_body": "Members agree to hold software developers harmless for unintentional mistakes made in the expression of contractual intent, whether or not said mistakes were due to actual or perceived negligence.",
   "constitution_article_17_title": "Article XVII - Consideration",
   "constitution_article_17_body": "All rights and obligations under this Constitution are mutual and reciprocal and of equally significant value and cost to all parties.",
   "constitution_article_18_title": "Article XVIII - Acceptance",
-  "constitution_article_18_body": "A contract is deemed accepted when a member signs a transaction which incorporates a TAPOS proof of a block whose implied state incorporates an ABI of said contract and said transaction is incorporated into the blockchain.",
+  "constitution_article_18_body": "A contract is deemed accepted when a member signs a transaction which incorporates a TAPOS proof of a block whose implied state incorporates an ABI of said contract and said transaction is incorporated into the decentralized banking network.",
   "constitution_article_19_title": "Article XIX - Counterparts",
   "constitution_article_19_body": "This Constitution may be executed in any number of counterparts, each of which when executed and delivered shall constitute a duplicate original, but all counterparts together shall constitute a single agreement.",
-  "constitution_article_20_title": "Article XX - Interim Constitution",
+  "constitution_article_20_title": "Article XX - Interim United Chains Constitution",
   "constitution_article_20_body": "This constitution is interim and is intended to remain in effect until a permanent constitution is written and ratified in a referendum."
 }

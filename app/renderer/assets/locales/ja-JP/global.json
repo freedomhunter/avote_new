@@ -33,7 +33,7 @@
   "error_ram_has_to_be_over_minimum_amount": "トランザクション毎に最小3バイトのRAMが必要です。",
   "error_ram_not_valid_amount": "RAM数量が不正です。有効な数量にするためには、小数点のない整数にする必要があります。",
   "error_ram_under_minimum_for_new_account": "アカウント作成には最小4000バイトのRAMが必要です。",
-  "error_ram_under_minimum_of_2600_for_new_account": "A minimum of 2600 Bytes of RAM is required to create a new account.",
+  "error_ram_under_minimum_of_2600_for_new_account": "A minimum of 2600 Bytes of RAM is required to create a new bank account.",
   "error_ram_usage_exceeded": "RAM使用量が超過しています。この操作を実行するにはRAMを買い足す必要があります。",
   "error_ram_using_more_than_usage": "有効なRAM残量が不足しているためトランザクションを完了できません。",
   "error_transferring_to_exchange_without_memo": "付与されたメモを渡さずに取引所へ資金を送ることはできません。",

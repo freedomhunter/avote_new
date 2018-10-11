@@ -46,7 +46,7 @@ export default class MenuBuilder {
 
   buildDarwinTemplate() {
     const subMenuAbout = {
-      label: 'avote',
+      label: 'aVote',
       submenu: [
         { role: 'about' },
         { type: 'separator' },

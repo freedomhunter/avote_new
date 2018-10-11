@@ -11,7 +11,7 @@
   "rsn_in_net_after": "RSN en Bandwidth après",
   "have_already_unstaked": "You are currently unstaking ",
   "net_staked": "RSN attribué au Bandwidth",
-  "stake_account_name": "Account Name",
+  "stake_account_name": "Bank Account Name",
   "stake_button_cta": "Mettez vos ressources à jour",
   "stake_confirming_header_one": "About to change delegation of: ",
   "stake_cpu_amount": "CPU Amount",

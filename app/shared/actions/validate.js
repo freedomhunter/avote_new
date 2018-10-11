@@ -27,7 +27,7 @@ export function validateAccount(account) {
             net_weight: 0
           };
         }
-        // Dispatch the results of the account itself
+        // Dispatch the results of the bank account itself
         dispatch({
           type: types.GET_ACCOUNT_SUCCESS,
           payload: { results: modified }
@@ -131,9 +131,9 @@ export function validateKey(key) {
       // Keys must resolve to one of these types of permissions
       const permissions = ['active', 'owner'];
       try {
-        // Derive the public key from the private key provided
+        // Derive the public key from the Bank Account's Private Key provided
         const expect = ecc.privateToPublic(key);
-        // Filter the account's permissions to find any valid matches
+        // Filter the bank account's permissions to find any valid matches
         const validPermissions = account.permissions.filter((perm) => {
           // Get the threshold a key needs to perform operations
           const { threshold } = perm.required_auth;

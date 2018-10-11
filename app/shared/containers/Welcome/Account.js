@@ -87,7 +87,7 @@ class WelcomeAccountContainer extends Component<Props> {
       settings
     } = this.props;
     switch (settings.walletMode) {
-      // with cold wallets, there's no way to validate, assume true
+      // with BankVaults, there's no way to validate, assume true
       case 'cold': {
         const { setSetting } = actions;
         setSetting('account', account);
@@ -149,7 +149,7 @@ class WelcomeAccountContainer extends Component<Props> {
         header={t('welcome:welcome_account_lookup_title')}
       />
     );
-    // display an error if the account could not be found
+    // display an error if the bank account could not be found
     if (validate.ACCOUNT === 'FAILURE') {
       message = (
         <Message

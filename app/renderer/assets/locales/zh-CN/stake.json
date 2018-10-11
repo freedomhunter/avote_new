@@ -11,7 +11,7 @@
   "rsn_in_net_after": "RSN在宽带之后",
   "have_already_unstaked": "You are currently unstaking ",
   "net_staked": "RSN以带宽放样",
-  "stake_account_name": "Account Name",
+  "stake_account_name": "Bank Account Name",
   "stake_button_cta": "更新放大的RSN",
   "stake_confirming_header_one": "About to change delegation of: ",
   "stake_cpu_amount": "CPU Amount",

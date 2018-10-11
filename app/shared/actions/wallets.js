@@ -36,20 +36,20 @@ export function removeWallet(account) {
 export function useWallet(account) {
   return (dispatch: () => void, getState) => {
     const { wallets } = getState();
-    // Find the wallet by account name
+    // Find the bank account by account name
     const wallet = find(wallets, { account });
-    // Lock the wallet to remove old account keys
+    // Lock the bank account to remove old account keys
     dispatch({
       type: types.WALLET_LOCK
     });
-    // Set the wallet mode configuration
+    // Set the bank account mode configuration
     dispatch(setWalletMode(wallet.mode));
-    // Update the settings for the current account
+    // Update the settings for the current bank account
     dispatch(setSettings({
       account
     }));
     if (wallet.mode !== 'cold') {
-      // Update the account in local state
+      // Update the bank account in local state
       dispatch(getAccount(account));
     }
     // Set the active wallet to remember the last used

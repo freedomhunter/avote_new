@@ -5,19 +5,19 @@ import * as types from '../actions/types';
 const initialState = {
   // If the active session has accepted the ARISEN constitution
   acceptedConstitution: false,
-  // If the wallet has ackknowledged understanding the smart contract tool
+  // If the bank account has ackknowledged understanding the smart contract tool
   acceptedContractInterface: false,
   // Enable advanced permissions management
   advancedPermissions: false,
   // The loaded account
   account: '',
-  // The block explorer used
+  // The Decentralized Bank Explorer used
   blockExplorer: 'arisenexplorer.com',
   // List of contacts
   contacts: [],
-  // Custom tokens the wallet should be tracking
+  // Custom Private Currencys the bank account should be tracking
   customTokens: [
-    // Always track the RSN token
+    // Always track the RSN private and sovereign currency
     'arisen.token:RSN'
   ],
   // Defaults to displaying resources remaining
@@ -30,9 +30,9 @@ const initialState = {
   lang: '',
   // The node to connect to
   node: '',
-  // Recent contracts the wallet has used
+  // Recent contracts the bank account has used
   recentContracts: [],
-  // Recent referendum scopes the wallet has used
+  // Recent referendum scopes the bank account has used
   recentProposalsScopes: [],
   // Allows the UI to start with only a connected node
   skipImport: false,
@@ -42,7 +42,7 @@ const initialState = {
   setupData: {},
   // Wallet Status
   walletInit: false,
-  // Wallet Mode (hot/cold/watch)
+  // Bank Account Mode (hot/cold/watch)
   walletMode: 'hot',
   // Wallet is Temporary
   walletTemp: false

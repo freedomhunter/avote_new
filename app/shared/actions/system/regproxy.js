@@ -20,7 +20,7 @@ export function regproxy() {
       proxy: account,
       isproxy: 1
     }).then((tx) => {
-      // Refresh the account
+      // Refresh the bank account
       setTimeout(dispatch(getAccount(account)), 500);
       return dispatch({
         payload: { tx },

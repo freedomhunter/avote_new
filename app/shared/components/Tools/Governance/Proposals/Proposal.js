@@ -71,8 +71,8 @@ class ToolsGovernanceProposalsProposal extends Component<Props> {
             ? (
               <Message
                 color="green"
-                header="This account has approved this proposal."
-                content="The stake weighted value of this account has been recorded as approving this proposal."
+                header="This bank account has approved this proposal."
+                content="The stake weighted value of this bank account has been recorded as approving this proposal."
                 icon="checkmark"
               />
             )
@@ -82,8 +82,8 @@ class ToolsGovernanceProposalsProposal extends Component<Props> {
             ? (
               <Message
                 color="red"
-                header="This account has opposed this proposal."
-                content="The stake weighted value of this account has been recorded as opposing this proposal."
+                header="This bank account has opposed this proposal."
+                content="The stake weighted value of this bank account has been recorded as opposing this proposal."
                 icon="x"
               />
             )

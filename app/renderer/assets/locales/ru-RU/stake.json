@@ -11,7 +11,7 @@
   "rsn_in_net_after": "RSN резервирующих пропускной способности сети (NET) после",
   "have_already_unstaked": "You are currently unstaking ",
   "net_staked": "RSN закреплённые для резервации пропускной способности сети (NET)",
-  "stake_account_name": "Account Name",
+  "stake_account_name": "Bank Account Name",
   "stake_button_cta": "Измененить количество закреплённых RSN",
   "stake_confirming_header_one": "About to change delegation of: ",
   "stake_cpu_amount": "CPU Amount",

@@ -16,13 +16,13 @@ const migrations = {
     } = state;
     // Create a copy of the existing wallet
     const existingWallet = Object.assign({}, wallet);
-    // Replicate the wallet account and mode from settings onto the wallet
+    // Replicate the bank account account and mode from settings onto the bank account
     existingWallet.account = settings.account;
     existingWallet.mode = settings.walletMode;
     // Update this individual wallets version
     existingWallet.version = 2;
     return {
-      // Update the existing settings + wallet state
+      // Update the existing settings + Bank Account State
       settings: state.settings,
       wallet: existingWallet,
       // Create the new wallets state and inject the first wallet
@@ -103,7 +103,7 @@ const migrations = {
   /*
   6 - Settings Migration
 
-    - Add contacts array to existing settings
+    - Add Banking Contacts array to existing settings
     - Add recentProposalsScopes array to existing settings
 
   */

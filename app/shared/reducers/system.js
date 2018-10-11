@@ -30,7 +30,7 @@ export default function system(state = {}, action) {
   };
 
   if (action.payload) {
-    // Attach the account name associated to request when given
+    // Attach the bank account name associated to request when given
     if (action.payload.account_name) {
       newState[accountField] = action.payload.account_name;
     }

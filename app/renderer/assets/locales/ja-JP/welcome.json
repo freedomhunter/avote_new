@@ -17,7 +17,7 @@
   "welcome_instructions_3": "公開鍵またはアカウント名を入力して下さい。",
   "welcome_instructions_3_cold": "使用するアカウント名を入力して下さい。",
   "welcome_instructions_4": "ドロップダウンリストで一致するアカウント一つを選択して下さい。",
-  "welcome_instructions_5": "Enter the private for this account.",
+  "welcome_instructions_5": "Enter the private for this bank account.",
   "welcome_instructions_5a": "このアカウントのアクティブ秘密鍵 (wif) を入力して下さい (オーナーキーは受付られません)。",
   "welcome_instructions_6": "暗号化してローカルウォレットを保存するか、一時的なアクセスで使用を続けるか選択して下さい。",
   "welcome_instructions_7": "既にアカウントを持っていますか？もしくは作成が必要ですか？",

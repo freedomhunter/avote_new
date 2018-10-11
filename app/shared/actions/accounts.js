@@ -35,7 +35,7 @@ export function claimUnstaked(owner) {
     return rsn(connection, true).refund({
       owner
     }).then((tx) => {
-      // Reload the account
+      // Reload the bank account
       dispatch(getAccount(owner));
       // Reload the balances
       dispatch(getCurrencyBalance(owner));
@@ -122,7 +122,7 @@ export function getAccount(account = '') {
     } = getState();
     if (account && (settings.node || settings.node.length !== 0)) {
       rsn(connection).getAccount(account).then((results) => {
-        // Trigger the action to load this accounts balances'
+        // Trigger the action to load this bank accounts balances'
         if (settings.account === account) {
           dispatch(getCurrencyBalance(account));
         }
@@ -138,7 +138,7 @@ export function getAccount(account = '') {
         if (modified.voter_info && modified.voter_info.proxy) {
           dispatch(getAccount(modified.voter_info.proxy));
         }
-        // Dispatch the results of the account itself
+        // Dispatch the results of the bank account itself
         return dispatch({
           type: types.GET_ACCOUNT_SUCCESS,
           payload: { results: modified }
