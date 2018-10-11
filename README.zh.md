@@ -25,10 +25,10 @@
 
 当前版本 1.0.0 可供下载:
 
-- [Windows Installer](https://github.com/arisenio/avote/releases/download/v1.0.0/win-avote-1.0.0.exe)
-- [macOS Package](https://github.com/arisenio/avote/releases/download/v1.0.0/mac-avote-1.0.0.dmg)
-- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.deb)
-- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.snap)
+- [Windows Installer](https://github.com/arisenio/avote/releases/download/v1.1.0/win-avote-1.0.0.exe)
+- [macOS Package](https://github.com/arisenio/avote/releases/download/v1.1.0/mac-avote-1.0.0.dmg)
+- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.deb)
+- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.snap)
 
 最新的版本将在此REPO的发布页面中找到：
 

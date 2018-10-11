@@ -25,10 +25,10 @@
 
 Current 1.0.0 release downloads:
 
-- [Windows Installer](https://github.com/arisenio/avote/releases/download/v1.0.0/win-avote-1.0.0.exe)
-- [macOS Package](https://github.com/arisenio/avote/releases/download/v1.0.0/mac-avote-1.0.0.dmg)
-- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.deb)
-- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.snap)
+- [Windows Installer](https://github.com/arisenio/avote/releases/download/v1.1.0/win-avote-1.0.0.exe)
+- [macOS Package](https://github.com/arisenio/avote/releases/download/v1.1.0/mac-avote-1.0.0.dmg)
+- [Linux (deb)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.deb)
+- [Linux (snap)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.snap)
 
 The latest release will always be available on the releases page of this repository:
 

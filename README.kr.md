@@ -25,10 +25,10 @@
 
 현재 1.0.0 버전 다운로드 :
 
-- [Windows 사용자](https://github.com/arisenio/avote/releases/download/v1.0.0/win-avote-1.0.0.exe)
-- [macOS 사용자](https://github.com/arisenio/avote/releases/download/v1.0.0/mac-avote-1.0.0.dmg)
-- [Linux 사용자 (deb)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.snap)
-- [Linux 사용자 (snap)](https://github.com/arisenio/avote/releases/download/v1.0.0/linux-avote-1.0.0-amd64.snap)
+- [Windows 사용자](https://github.com/arisenio/avote/releases/download/v1.1.0/win-avote-1.0.0.exe)
+- [macOS 사용자](https://github.com/arisenio/avote/releases/download/v1.1.0/mac-avote-1.0.0.dmg)
+- [Linux 사용자 (deb)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.snap)
+- [Linux 사용자 (snap)](https://github.com/arisenio/avote/releases/download/v1.1.0/linux-avote-1.0.0-amd64.snap)
 
 최신 버전은 항상이 저장소의 릴리스 페이지에서 제공됩니다:
 

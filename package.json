@@ -1,7 +1,7 @@
 {
-  "name": "avote",
-  "productName": "avote",
-  "version": "1.0.0",
+  "name": "aVote",
+  "productName": "aVote",
+  "version": "1.1.0",
   "description": "Simple light wallet and governance voting tool for the Arisen blockchain",
   "scripts": {
     "build": "concurrently \"npm run build-main\" \"npm run build-renderer\"",
@@ -29,7 +29,7 @@
   },
   "browserslist": "electron 1.6",
   "build": {
-    "productName": "avote",
+    "productName": "aVote",
     "appId": "com.arisen.avote",
     "artifactName": "${os}-${productName}-${version}-${arch}.${ext}",
     "asar": true,
@@ -87,7 +87,7 @@
       "category": "Network",
       "description": "Simple light wallet and block Governance Voting tool for the Arisen blockchain",
       "desktop": {
-        "Name": "avote",
+        "Name": "aVote",
         "GenericName": "aVote",
         "X-GNOME-FullName": "avote",
         "Comment": "Simple light wallet and block Governance Voting tool for the Arisen blockchain",
@@ -236,7 +236,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "arisenjsv1": "1.0.0",
+    "arisenjsv1": "~1.0.3",
     "crypto-js": "^3.1.9-1",
     "decimal.js": "^10.0.1",
     "dot-prop-immutable": "^1.4.0",
