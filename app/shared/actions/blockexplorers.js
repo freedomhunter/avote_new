@@ -25,38 +25,17 @@ export function getBlockExplorers() {
 
     const rows = [
       {
-        name: 'bloks.io',
+        name: 'dBankX',
         patterns: {
-          account: 'https://www.bloks.io/account/{account}',
-          txid: 'https://www.bloks.io/transaction/{txid}'
+          account: 'https://www.dbankx.io/account/{account}',
+          txid: 'https://www.dbankx.io/transaction/{txid}'
         }
       },
       {
-        name: 'rsnflare.io',
+        name: 'Arisen Explorer',
         patterns: {
-          account: 'https://rsnflare.io/account/{account}',
-          txid: 'https://rsnflare.io/tx/{txid}'
-        }
-      },
-      {
-        name: 'rsnmonitor.io',
-        patterns: {
-          account: 'https://rsnmonitor.io/account/{account}',
-          txid: 'https://rsnmonitor.io/txn/{txid}'
-        }
-      },
-      {
-        name: 'rsnpark.com',
-        patterns: {
-          account: 'https://rsnpark.com/MainNet/account/{account}',
-          txid: 'https://rsnpark.com/MainNet/tx/{txid}'
-        }
-      },
-      {
-        name: 'rsnweb.net',
-        patterns: {
-          account: 'https://rsnweb.net/account/{account}',
-          txid: 'https://rsnweb.net/transaction/{txid}'
+          account: 'https://arisenexplorer.com/accounts/{account}',
+          txid: 'https://arisenexplorer.com/transaction/{txid}'
         }
       }
     ];
