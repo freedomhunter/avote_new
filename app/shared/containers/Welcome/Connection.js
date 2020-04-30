@@ -28,7 +28,7 @@ class WelcomeConnectionContainer extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      node: props.settings.node || 'https://greatchain.arisennodes.io',
+      node: props.settings.node || 'https://greatchains.arisennodes.io',
       sslConfirm: false
     };
   }

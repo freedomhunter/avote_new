@@ -7,9 +7,9 @@
   "wallet_account_lookup_failure_header": "Unable to perform account lookup",
   "wallet_account_lookup_modal_accounts_found": "Accounts found with matching key...",
   "wallet_account_lookup_modal_accounts_found_none": "No accounts found matching key",
-  "wallet_account_lookup_modal_description": "Enter your public key (starts with RSN...) to lookup the bank accounts associated to it.",
-  "wallet_account_lookup_modal_field_label": "Clave pública (RSNxxxxx)",
-  "wallet_account_lookup_modal_key_invalid": "The key entered is not a valid RSN public key.",
+  "wallet_account_lookup_modal_description": "Enter your public key (starts with RIX...) to lookup the bank accounts associated to it.",
+  "wallet_account_lookup_modal_field_label": "Clave pública (RIXxxxxx)",
+  "wallet_account_lookup_modal_key_invalid": "The key entered is not a valid RIX public key.",
   "wallet_account_lookup_modal_title": "Lookup accounts by Public Key",
   "wallet_account_lookup_modal_trigger": "Lookup your account name?",
   "wallet_account_request_backup_header": "Backup your new bank account",
@@ -93,7 +93,7 @@
   "wallet_status_resources_usage": "Uso",
   "wallet_status_tab_account_data": "Datos",
   "wallet_status_tab_account_history": "Historia",
-  "wallet_status_tab_staked": "Staked RSN",
+  "wallet_status_tab_staked": "Staked RIX",
   "wallet_status_tab_token_balances": "Balances",
   "wallet_status_total_balance": "Total"
 }

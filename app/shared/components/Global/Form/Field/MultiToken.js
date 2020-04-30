@@ -8,7 +8,8 @@ export default class GlobalFormFieldMultiToken extends Component<Props> {
     super(props);
     const [quantity, asset] = props.value.split(' ');
     this.state = {
-      asset: asset || 'RSN',
+      // asset: asset || 'RIX',
+      asset: 'RIX',
       quantity
     };
   }
@@ -42,24 +43,32 @@ export default class GlobalFormFieldMultiToken extends Component<Props> {
       const [contract, symbol] = tokenName.split(':');
       return { contract, symbol };
     }) : [{
-      contract: 'arisen',
-      symbol: 'RSN'
+      contract: 'arisen.token',
+      symbol: 'RIX'
     }];
     const options = [];
     // Iterate assets and build the options list based on tracked tokens
     assets.forEach((asset) => {
       const assetDetails = find(trackedTokens, { symbol: asset });
+      console.log('asset value-1',assetDetails,'tracked',trackedTokens);
       if (assetDetails) {
         const { contract, symbol } = find(trackedTokens, { symbol: asset });
+        console.log('asset value-2',contract,'--',symbol);
         if (
           (contract && symbol)
           && (balances[settings.account] && balances[settings.account][asset] > 0)
         ) {
+          // options.push({
+          //   key: asset,
+          //   text: `${symbol} (${contract})`,
+          //   value: asset
+          // });
           options.push({
-            key: asset,
-            text: `${symbol} (${contract})`,
-            value: asset
+            key: 'RIX',
+            text: `${'RIX'} (${'arisen.token'})`,
+            value: 'RIX'
           });
+          console.log('option value',options);
         }
       }
     });
@@ -79,7 +88,7 @@ export default class GlobalFormFieldMultiToken extends Component<Props> {
           style={style}
         >
           <Dropdown
-            defaultValue={this.state.asset || 'RSN'}
+            defaultValue={this.state.asset || 'RIX'}
             name="asset"
             onChange={this.onChange}
             options={options}

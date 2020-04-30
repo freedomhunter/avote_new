@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function sellram(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function sellram(amount) {
 
     const { account } = settings;
 
-    return rsn(connection, true).sellram({
+    return rix(connection, true).sellram({
       account,
       bytes: Number(amount)
     }).then((tx) => {

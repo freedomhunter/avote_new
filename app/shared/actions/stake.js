@@ -8,7 +8,7 @@ import { undelegatebwParams } from './system/undelegatebw';
 
 import * as AccountActions from './accounts';
 import * as TableActions from './table';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function setStake(accountName, netAmount, cpuAmount) {
   return (dispatch: () => void, getState) => {
@@ -33,7 +33,7 @@ export function setStake(accountName, netAmount, cpuAmount) {
 
     dispatch({ type: types.SYSTEM_STAKE_PENDING });
 
-    return rsn(connection, true).transaction(tr => {
+    return rix(connection, true).transaction(tr => {
       if (increaseInStake.netAmount > 0 || increaseInStake.cpuAmount > 0) {
         tr.delegatebw(delegatebwParams(
           currentAccount.account_name,
@@ -91,7 +91,7 @@ function getStakeChanges(currentAccount, accountName, delegations, nextNetAmount
     const index = findIndex(delegations, { to: accountName });
 
     if (index === -1) {
-      accountResources = { cpu_weight: '0 RSN', net_weight: '0 RSN' };
+      accountResources = { cpu_weight: '0 RIX', net_weight: '0 RIX' };
     } else {
       accountResources = delegations[index];
     }

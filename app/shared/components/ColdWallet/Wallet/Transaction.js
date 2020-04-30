@@ -8,7 +8,7 @@ import GlobalTransactionViewActions from '../../Global/Transaction/View/Actions'
 import GlobalTransactionViewDetail from '../../Global/Transaction/View/Detail';
 import GlobalTransactionViewFull from '../../Global/Transaction/View/Full';
 
-import RSNTransaction from '../../../utils/RSN/Transaction';
+import RIXTransaction from '../../../utils/RIX/Transaction';
 
 const { ipcRenderer } = require('electron');
 
@@ -18,7 +18,7 @@ class ColdWalletTransaction extends Component<Props> {
   componentWillReceiveProps(nextProps) {
     const { transaction } = this.props;
     if (!transaction.signed && nextProps.transaction.signed) {
-      const data = new RSNTransaction(nextProps.transaction);
+      const data = new RIXTransaction(nextProps.transaction);
       ipcRenderer.send('saveFile', data.json(), 'signed');
     }
   }

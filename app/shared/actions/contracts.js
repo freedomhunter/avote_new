@@ -1,6 +1,6 @@
 import * as types from './types';
-import RSNContract from '../utils/RSN/Contract';
-import rsn from './helpers/rsn';
+import RIXContract from '../utils/RIX/Contract';
+import rix from './helpers/rix';
 
 export function getAbi(account) {
   return (dispatch: () => void, getState) => {
@@ -8,7 +8,7 @@ export function getAbi(account) {
       type: types.SYSTEM_GETABI_REQUEST
     });
     const { connection } = getState();
-    return rsn(connection, true).getAbi(account).then((contract) => {
+    return rix(connection, true).getAbi(account).then((contract) => {
       if (!contract.abi) {
         return dispatch({
           type: types.SYSTEM_GETABI_FAILURE

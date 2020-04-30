@@ -107,7 +107,7 @@ class ToolsCustomTokens extends Component<Props> {
           </Table.Header>
           <Table.Body>
             {([].concat(tokens)
-                .filter((token) => (token.symbol !== 'RSN'))
+                .filter((token) => (token.symbol !== 'RIX'))
                 .map((token) => {
                   const name = `${token.contract}:${token.symbol}`;
                   const isSelected = !!(settings.customTokens && settings.customTokens.indexOf(name) !== -1);

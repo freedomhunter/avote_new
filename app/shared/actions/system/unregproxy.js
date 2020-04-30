@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function unregproxy() {
   return (dispatch: () => void, getState) => {
@@ -14,7 +14,7 @@ export function unregproxy() {
     dispatch({
       type: types.SYSTEM_UNREGPROXY_PENDING
     });
-    return rsn(connection, true).regproxy({
+    return rix(connection, true).regproxy({
       proxy: account,
       isproxy: 0
     }).then((tx) => {

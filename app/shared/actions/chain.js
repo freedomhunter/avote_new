@@ -1,6 +1,6 @@
 import * as types from './types';
 
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function getInfo() {
   return (dispatch: () => void, getState) => {
@@ -8,7 +8,7 @@ export function getInfo() {
       type: types.GET_CHAIN_INFO_REQUEST
     });
     const { connection } = getState();
-    rsn(connection).getInfo(true).then((chain) => dispatch({
+    rix(connection).getInfo(true).then((chain) => dispatch({
       type: types.GET_CHAIN_INFO_SUCCESS,
       payload: { chain }
     })).catch((err) => dispatch({

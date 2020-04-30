@@ -1,7 +1,7 @@
 import concat from 'lodash/concat';
 
 import * as types from './types';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function getTable(code, scope, table, limit = 1000, index = false, previous = false) {
   return (dispatch: () => void, getState) => {
@@ -22,7 +22,7 @@ export function getTable(code, scope, table, limit = 1000, index = false, previo
       query.lower_bound = ` ${previous[previous.length - 1][index]}`;
       query.table_key = index;
     }
-    rsn(connection).getTableRows(query).then((results) => {
+    rix(connection).getTableRows(query).then((results) => {
       const { more } = results;
       let { rows } = results;
       // If previous rows were returned

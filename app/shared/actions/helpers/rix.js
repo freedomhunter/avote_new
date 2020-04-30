@@ -2,9 +2,9 @@ import { decrypt } from '../wallet';
 
 const CryptoJS = require('crypto-js');
 const ecc = require('arisenjs-ecc');
-const Rsn = require('arisenjsv1');
+const Rsn = require('@arisencore/js');
 
-export default function rsn(connection, signing = false) {
+export default function rix(connection, signing = false) {
   const decrypted = Object.assign({}, connection);
   if (signing && decrypted.keyProviderObfuscated) {
     const {

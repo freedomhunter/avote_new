@@ -32,9 +32,9 @@ class ToolsFormCreateAccountConfirming extends Component<Props> {
     return (
       <Segment padding="true" basic>
         <Header textAlign="center">
-          <p>{`${t('tools_form_create_account_confirming_header_one')} ${totalCost.toFixed(4)} RSN.`}</p>
+          <p>{`${t('tools_form_create_account_confirming_header_one')} ${totalCost.toFixed(4)} RIX.`}</p>
           <p>
-            {`${t('tools_form_create_account_confirming_header_two')} ${totalDelegated.toFixed(4)} RSN ${t('tools_form_create_account_confirming_header_three')}`}
+            {`${t('tools_form_create_account_confirming_header_two')} ${totalDelegated.toFixed(4)} RIX ${t('tools_form_create_account_confirming_header_three')}`}
           </p>
         </Header>
         <Table size="small" celled>

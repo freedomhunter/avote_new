@@ -1,7 +1,7 @@
 import { forEach } from 'lodash';
 
 import * as types from './types';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function clearAccountCache() {
   return (dispatch: () => void) => {
@@ -32,7 +32,7 @@ export function claimUnstaked(owner) {
     dispatch({
       type: types.SYSTEM_REFUND_PENDING
     });
-    return rsn(connection, true).refund({
+    return rix(connection, true).refund({
       owner
     }).then((tx) => {
       // Reload the bank account
@@ -62,7 +62,7 @@ export function checkAccountAvailability(account = '') {
     } = getState();
 
     if (account && (settings.node || settings.node.length !== 0)) {
-      rsn(connection).getAccount(account).then(() => dispatch({
+      rix(connection).getAccount(account).then(() => dispatch({
         type: types.SYSTEM_ACCOUNT_AVAILABLE_FAILURE,
         payload: { account_name: account }
       })).catch((err) => {
@@ -99,7 +99,7 @@ export function checkAccountExists(account = '') {
     } = getState();
 
     if (account && (settings.node || settings.node.length !== 0)) {
-      rsn(connection).getAccount(account).then(() => dispatch({
+      rix(connection).getAccount(account).then(() => dispatch({
         type: types.SYSTEM_ACCOUNT_EXISTS_SUCCESS,
         payload: { account_name: account }
       })).catch((err) => dispatch({
@@ -121,7 +121,7 @@ export function getAccount(account = '') {
       settings
     } = getState();
     if (account && (settings.node || settings.node.length !== 0)) {
-      rsn(connection).getAccount(account).then((results) => {
+      rix(connection).getAccount(account).then((results) => {
         // Trigger the action to load this bank accounts balances'
         if (settings.account === account) {
           dispatch(getCurrencyBalance(account));
@@ -130,8 +130,8 @@ export function getAccount(account = '') {
         const modified = Object.assign({}, results);
         if (!modified.self_delegated_bandwidth) {
           modified.self_delegated_bandwidth = {
-            cpu_weight: '0.0000 RSN',
-            net_weight: '0.0000 RSN'
+            cpu_weight: '0.0000 RIX',
+            net_weight: '0.0000 RIX'
           };
         }
         // If a proxy voter is set, cache it's data for vote referencing
@@ -177,7 +177,7 @@ export function getActions(account, start, offset) {
     });
 
     if (account && (settings.node || settings.node.length !== 0)) {
-      rsn(connection).getActions(account, start, offset).then((results) => {
+      rix(connection).getActions(account, start, offset).then((results) => {
         const resultNewestAction = results.actions[results.actions.length - 1];
         const resultsNewestActionId = resultNewestAction && resultNewestAction.account_action_seq;
 
@@ -238,7 +238,7 @@ export function getCurrencyBalance(account, requestedTokens = false) {
     } = getState();
     if (account && (settings.node || settings.node.length !== 0)) {
       const { customTokens } = settings;
-      let selectedTokens = ['arisen.token:RSN'];
+      let selectedTokens = ['arisen.token:RIX'];
       if (customTokens && customTokens.length > 0) {
         selectedTokens = [...customTokens, ...selectedTokens];
       }
@@ -255,7 +255,7 @@ export function getCurrencyBalance(account, requestedTokens = false) {
       });
       forEach(selectedTokens, (namespace) => {
         const [contract, symbol] = namespace.split(':');
-        rsn(connection).getCurrencyBalance(contract, account, symbol).then((results) =>
+        rix(connection).getCurrencyBalance(contract, account, symbol).then((results) =>
           dispatch({
             type: types.GET_ACCOUNT_BALANCE_SUCCESS,
             payload: {
@@ -312,7 +312,7 @@ export function getAccountByKey(key) {
       settings
     } = getState();
     if (key && (settings.node || settings.node.length !== 0)) {
-      return rsn(connection).getKeyAccounts(key).then((accounts) => dispatch({
+      return rix(connection).getKeyAccounts(key).then((accounts) => dispatch({
         type: types.SYSTEM_ACCOUNT_BY_KEY_SUCCESS,
         payload: { accounts }
       })).catch((err) => dispatch({

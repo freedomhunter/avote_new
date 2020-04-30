@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function buyrambytes(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function buyrambytes(amount) {
 
     const { account } = settings;
 
-    return rsn(connection, true).buyrambytes({
+    return rix(connection, true).buyrambytes({
       payer: account,
       receiver: account,
       bytes: Number(amount)

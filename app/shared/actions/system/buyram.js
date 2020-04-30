@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function buyram(amount) {
   return (dispatch: () => void, getState) => {
@@ -16,10 +16,10 @@ export function buyram(amount) {
 
     const { account } = settings;
 
-    return rsn(connection, true).buyram({
+    return rix(connection, true).buyram({
       payer: account,
       receiver: account,
-      quant: `${amount.toFixed(4)} RSN`
+      quant: `${amount.toFixed(4)} RIX`
     }).then((tx) => {
       setTimeout(dispatch(getAccount(account)), 500);
 

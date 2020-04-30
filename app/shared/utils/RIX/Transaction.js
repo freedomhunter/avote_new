@@ -1,4 +1,4 @@
-export default class RSNTransaction {
+export default class RIXTransaction {
   constructor(transaction) {
     this.contract = transaction.contract;
     this.transaction = transaction.data;

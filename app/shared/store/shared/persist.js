@@ -44,13 +44,13 @@ const migrations = {
       !newSettings.customTokens
       || !newSettings.customTokens.length
     ) {
-      newSettings.customTokens = ['arisen.token:RSN'];
+      newSettings.customTokens = ['arisen.token:RIX'];
     }
     if (
       newSettings.customTokens
-      && newSettings.customTokens.indexOf('arisen.token:RSN') === -1
+      && newSettings.customTokens.indexOf('arisen.token:RIX') === -1
     ) {
-      newSettings.customTokens.push('arisen.token:RSN');
+      newSettings.customTokens.push('arisen.token:RIX');
     }
     return Object.assign({}, state, {
       settings: newSettings

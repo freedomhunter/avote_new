@@ -1,6 +1,6 @@
 import * as types from '../actions/types';
 
-import RSNContract from '../utils/RSN/Contract';
+import RIXContract from '../utils/RIX/Contract';
 
 export default function system(state = {}, action) {
   const { type } = action;
@@ -49,7 +49,7 @@ export default function system(state = {}, action) {
     // Attach any returned ABIs
     if (action.payload.contract) {
       const { abi, account_name } = action.payload.contract;
-      newState[contractField] = new RSNContract(abi, account_name);
+      newState[contractField] = new RIXContract(abi, account_name);
     }
   }
 

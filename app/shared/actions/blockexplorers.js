@@ -1,7 +1,7 @@
 import sortBy from 'lodash/sortBy';
 
 import * as types from './types';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function getBlockExplorers() {
   return (dispatch: () => void, getState) => {
@@ -10,7 +10,7 @@ export function getBlockExplorers() {
     });
     // const { connection } = getState();
     // // Don't retrieve if we're not on mainnet
-    // if (connection.chain !== 'rsn-mainnet') {
+    // if (connection.chain !== 'rix-mainnet') {
     //   return dispatch({
     //     type: types.SYSTEM_BLOCKEXPLORERS_FAILURE
     //   });
@@ -40,7 +40,7 @@ export function getBlockExplorers() {
       }
     ];
 
-    // rsn(connection).getTableRows(query).then((results) => {
+    // rix(connection).getTableRows(query).then((results) => {
     //   const { rows } = results;
 
     const sortedList = sortBy(rows, 'name');

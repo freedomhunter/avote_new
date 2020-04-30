@@ -1,7 +1,7 @@
 import * as types from '../../types';
 
 import { getTable } from '../../table';
-import rsn from '../../helpers/rsn';
+import rix from '../../helpers/rix';
 
 export function setregproxyinfo(data) {
   return (dispatch: () => void, getState) => {
@@ -16,7 +16,7 @@ export function setregproxyinfo(data) {
 
     const { account } = settings;
 
-    return rsn(connection, true).transaction({
+    return rix(connection, true).transaction({
       actions: [
         {
           account: 'regproxyinfo',
@@ -57,7 +57,7 @@ export function removeregproxyinfo() {
 
     const { account } = settings;
 
-    return rsn(connection, true).transaction({
+    return rix(connection, true).transaction({
       actions: [
         {
           account: 'regproxyinfo',

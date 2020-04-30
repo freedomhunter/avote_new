@@ -17,8 +17,8 @@ const initialState = {
   contacts: [],
   // Custom Private Currencys the bank account should be tracking
   customTokens: [
-    // Always track the RSN private and sovereign currency
-    'arisen.token:RSN'
+    // Always track the RIX private and sovereign currency
+    'arisen.token:RIX'
   ],
   // Defaults to displaying resources remaining
   displayResourcesAvailable: true,

@@ -4,7 +4,7 @@ import sortBy from 'lodash/sortBy';
 import uniqWith from 'lodash/uniqWith';
 
 import * as types from './types';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function getCustomTokens(previous = false) {
   return (dispatch: () => void, getState) => {
@@ -13,7 +13,7 @@ export function getCustomTokens(previous = false) {
     });
     const { connection } = getState();
     // Don't retrieve if we're not on mainnet
-    if (connection.chain !== 'rsn-mainnet') {
+    if (connection.chain !== 'rix-mainnet') {
       return dispatch({
         type: types.SYSTEM_CUSTOMTOKENS_FAILURE
       });
@@ -29,7 +29,7 @@ export function getCustomTokens(previous = false) {
     if (previous) {
       query.lower_bound = previous[previous.length - 1].owner;
     }
-    rsn(connection).getTableRows(query).then((results) => {
+    rix(connection).getTableRows(query).then((results) => {
       let { rows } = results;
       // If previous rows were returned
       if (previous) {

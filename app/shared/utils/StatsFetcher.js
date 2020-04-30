@@ -76,13 +76,13 @@ export default class StatsFetcher {
   }
 
   tokens() {
-    return this.balance ? this.balance : { RSN: 0 };
+    return this.balance ? this.balance : { RIX: 0 };
   }
 
   totalTokens() {
     const totalStaked = this.totalStakedToSelf().plus(this.totalStakedToOthers());
     const totalBeingUnstaked = this.totalBeingUnstaked();
-    const totalTokens = this.tokens().RSN || new Decimal(0);
+    const totalTokens = this.tokens().RIX || new Decimal(0);
 
     return totalStaked.plus(totalBeingUnstaked).plus(totalTokens);
   }
@@ -131,8 +131,8 @@ export default class StatsFetcher {
     const totalNetAmount = Decimal(total_resources.net_weight.split(' ')[0]);
 
     return {
-      cpuWeight: `${totalCpuAmount.minus(selfCpuAmount).toFixed(4)} RSN`,
-      netWeight: `${totalNetAmount.minus(selfNetAmount).toFixed(4)} RSN`,
+      cpuWeight: `${totalCpuAmount.minus(selfCpuAmount).toFixed(4)} RIX`,
+      netWeight: `${totalNetAmount.minus(selfNetAmount).toFixed(4)} RIX`,
       totalStaked: this.totalStakedToSelf() + this.totalStakedToOthers()
     };
   }

@@ -16,7 +16,7 @@ import * as WalletActions from '../../actions/wallet';
 import ContractInterfaceComponent from '../../components/Contract/Interface/Component';
 import WalletPanelLocked from '../../components/Wallet/Panel/Locked';
 
-import RSNContract from '../../utils/RSN/Contract';
+import RIXContract from '../../utils/RIX/Contract';
 
 class ContractInterfaceContainer extends Component<Props> {
   render() {
@@ -45,7 +45,7 @@ class ContractInterfaceContainer extends Component<Props> {
 function mapStateToProps(state) {
   // Wrap all contracts in the associated helper
   const contracts = mapValues(state.contracts, (contract) =>
-    new RSNContract(contract.abi, contract.account_name));
+    new RIXContract(contract.abi, contract.account_name));
   return {
     blockExplorers: state.blockexplorers,
     contracts,

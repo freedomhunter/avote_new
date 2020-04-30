@@ -16,7 +16,7 @@ class WalletPanelFormTransferSend extends Component<Props> {
   constructor(props) {
     super(props);
     this.state = {
-      asset: 'RSN',
+      asset: 'RIX',
       confirming: false,
       formError: false,
       from: props.settings.account,
@@ -29,6 +29,11 @@ class WalletPanelFormTransferSend extends Component<Props> {
       waiting: false,
       waitingStarted: 0
     };
+  }
+
+  componentWillReceiveProps(props){
+    console.log('props value',props);
+    console.log('state vlaue',this.state)
   }
 
   onConfirm = () => {
@@ -253,7 +258,7 @@ class WalletPanelFormTransferSend extends Component<Props> {
                 value={quantity}
               />
               <p>
-                {`${balance[asset].toFixed(4)} ${asset} ${t('transfer_header_available')}`}
+                {`${balance[asset].toFixed(4)} ${asset} ${('available to transfer.')}`}
               </p>
               <GlobalFormFieldMemo
                 icon="x"

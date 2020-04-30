@@ -7,9 +7,9 @@
   "wallet_account_lookup_failure_header": "Ei suutnud trsntada konto otsingut",
   "wallet_account_lookup_modal_accounts_found": "Võtmega sobisid järgnevad kontod...",
   "wallet_account_lookup_modal_accounts_found_none": "Võtmega sobivaid kontosid ei leitud",
-  "wallet_account_lookup_modal_description": "Sisesta enda avalik võti (algab RSN...) et leida kontosid, mis on sellega seotud.",
-  "wallet_account_lookup_modal_field_label": "Avalik võti (RSNxxxxx)",
-  "wallet_account_lookup_modal_key_invalid": "Sisestatud võti ei ole kehtiv RSN avalik võti.",
+  "wallet_account_lookup_modal_description": "Sisesta enda avalik võti (algab RIX...) et leida kontosid, mis on sellega seotud.",
+  "wallet_account_lookup_modal_field_label": "Avalik võti (RIXxxxxx)",
+  "wallet_account_lookup_modal_key_invalid": "Sisestatud võti ei ole kehtiv RIX avalik võti.",
   "wallet_account_lookup_modal_title": "Otsi kontosid avaliku võtme järgi",
   "wallet_account_lookup_modal_trigger": "Otsi oma kontonime?",
   "wallet_account_request_backup_header": "Tee oma uuest kontost varukoopia",
@@ -93,7 +93,7 @@
   "wallet_status_resources_usage": "Kasutus",
   "wallet_status_tab_account_data": "Andmed",
   "wallet_status_tab_account_history": "Ajalugu",
-  "wallet_status_tab_staked": "Panustatud RSN",
+  "wallet_status_tab_staked": "Panustatud RIX",
   "wallet_status_tab_token_balances": "Saldod",
   "wallet_status_total_balance": "Kokku"
 }

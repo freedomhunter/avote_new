@@ -61,7 +61,7 @@ class ToolsGovernanceProposals extends Component<Props> {
           content={(
             <React.Fragment>
               <p>
-                The Referendum system is a smart contract that allows Arisen stakeholders to directly be involved in the governance of the Arisen blockchain. When a proposal is entered into the referendum contract, there will be a period of time where all accounts staking RSN will be allowed to vote in yes/no on the matters presented in a stake weighted system.
+                The Referendum system is a smart contract that allows Arisen stakeholders to directly be involved in the governance of the Arisen blockchain. When a proposal is entered into the referendum contract, there will be a period of time where all accounts staking RIX will be allowed to vote in yes/no on the matters presented in a stake weighted system.
               </p>
               <p>
                 External links to learn more about this system will be integrated as the system evolves and as more official releases are made available.

@@ -5,17 +5,17 @@
 
 [English](https://github.com/arisenio/avote/blob/master/README.md) - [한글](https://github.com/arisenio/avote/blob/master/README.kr.md) - [中文](https://github.com/arisenio/avote/blob/master/README.zh.md) - [日本語](https://github.com/arisenio/avote/blob/master/README.ja.md)
 
-# avote - RSN 超级节点投票器 & 钱包
+# avote - RIX 超级节点投票器 & 钱包
 
-`avote` 是一款为RSN区块链设计的轻量级钱包的有限功能版本。此程序用于连接到远程RSN API节点来执行超级节点投票操作和一些基本钱包命令。
+`avote` 是一款为RIX区块链设计的轻量级钱包的有限功能版本。此程序用于连接到远程RIX API节点来执行超级节点投票操作和一些基本钱包命令。
 
 [![avote screenshot](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)](https://raw.githubusercontent.com/arisenio/avote/master/avote.png)
 
 ### 功能
 
-- **超级节点投票**: 选择你支持的RSN超级节点并进行投票。请注意节点投票UI不是一个学术工具，它是一个简洁的界面，提供了一种安全的投票方式。
-- **代币发送**: 将RSN或任何其他代币发送给其他用户或交易所。
-- **CPU/带宽抵押**: 将你的RSN抵押作为带宽或CPU。这赋予了你使用网络资源的权利，同时也转换成了你给超级节点投票的权重。
+- **超级节点投票**: 选择你支持的RIX超级节点并进行投票。请注意节点投票UI不是一个学术工具，它是一个简洁的界面，提供了一种安全的投票方式。
+- **代币发送**: 将RIX或任何其他代币发送给其他用户或交易所。
+- **CPU/带宽抵押**: 将你的RIX抵押作为带宽或CPU。这赋予了你使用网络资源的权利，同时也转换成了你给超级节点投票的权重。
 - **本地钱包**: 为你导入私钥生成的钱包创建一个密码。你的私钥将使用此密码进行本地加密。每次解锁钱包时，都需要此密码。
 - **临时使用**: 如果你不想讲私钥存储在该应用内，只要选择不设置密码就可以。当程序退出时，你的私钥将被忘记。
 
@@ -84,7 +84,7 @@ yarn dev
 
 ### 声明
 
-该应用由[BenchX](https://benchx.io)团队领导开发，用于帮助RSN持有人参与RSN的治理。
+该应用由[BenchX](https://benchx.io)团队领导开发，用于帮助RIX持有人参与RIX的治理。
 
 ### Release Signatures
 

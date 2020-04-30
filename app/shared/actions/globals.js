@@ -3,7 +3,7 @@ import { Decimal } from 'decimal.js';
 
 import * as types from './types';
 
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 export function getGlobals() {
   return (dispatch: () => void, getState) => {
@@ -11,7 +11,7 @@ export function getGlobals() {
       type: types.GET_GLOBALS_REQUEST
     });
     const { connection } = getState();
-    rsn(connection).getTableRows(true, 'arisen', 'arisen', 'global').then((results) => dispatch({
+    rix(connection).getTableRows(true, 'arisen', 'arisen', 'global').then((results) => dispatch({
       type: types.GET_GLOBALS_SUCCESS,
       payload: { results }
     })).catch((err) => dispatch({
@@ -21,7 +21,7 @@ export function getGlobals() {
   };
 }
 
-export function getCurrencyStats(contractName = "arisen.token", symbolName = "RSN") {
+export function getCurrencyStats(contractName = "arisen.token", symbolName = "RIX") {
   const account = contractName.toLowerCase();
   const symbol = symbolName.toUpperCase();
   return (dispatch: () => void, getState) => {
@@ -29,7 +29,7 @@ export function getCurrencyStats(contractName = "arisen.token", symbolName = "RS
       type: types.GET_CURRENCYSTATS_REQUEST
     });
     const { connection } = getState();
-    rsn(connection).getCurrencyStats(account, symbol).then((results) => {
+    rix(connection).getCurrencyStats(account, symbol).then((results) => {
       if (isEmpty(results)) {
         return dispatch({
           type: types.GET_CURRENCYSTATS_FAILURE,
@@ -71,7 +71,7 @@ export function getRamStats() {
       json: true
     };
 
-    rsn(connection).getTableRows(query).then((results) => {
+    rix(connection).getTableRows(query).then((results) => {
       const { rows } = results;
       const baseBalance = rows[0].base.balance.split(' ')[0];
       const quoteBalance = rows[0].quote.balance.split(' ')[0];

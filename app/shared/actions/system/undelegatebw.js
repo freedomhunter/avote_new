@@ -1,6 +1,6 @@
 import * as types from '../types';
 import * as AccountActions from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function undelegatebw(delegator, receiver, netAmount, cpuAmount) {
   return (dispatch: () => void, getState) => {
@@ -12,7 +12,7 @@ export function undelegatebw(delegator, receiver, netAmount, cpuAmount) {
       type: types.SYSTEM_UNDELEGATEBW_PENDING
     });
 
-    return rsn(connection, true).transaction(tr => {
+    return rix(connection, true).transaction(tr => {
       tr.undelegatebw(undelegatebwParams(delegator, receiver, netAmount, cpuAmount));
     }).then((tx) => {
       dispatch(AccountActions.getAccount(delegator));
@@ -34,8 +34,8 @@ export function undelegatebwParams(delegator, receiver, netAmount, cpuAmount) {
   return {
     from: delegator,
     receiver,
-    unstake_net_quantity: `${unstakeNetAmount.toFixed(4)} RSN`,
-    unstake_cpu_quantity: `${unstakeCpuAmount.toFixed(4)} RSN`,
+    unstake_net_quantity: `${unstakeNetAmount.toFixed(4)} RIX`,
+    unstake_cpu_quantity: `${unstakeCpuAmount.toFixed(4)} RIX`,
     transfer: 0
   };
 }

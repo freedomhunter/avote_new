@@ -1,6 +1,6 @@
 import * as types from './types';
 import { setSetting } from './settings';
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 
 const CryptoJS = require('crypto-js');
 const ecc = require('arisenjs-ecc');
@@ -121,7 +121,7 @@ export function unlockWallet(password, useWallet = false) {
     }
     let account = accounts[wallet.account];
     if (settings.walletMode === 'hot' && !account) {
-      account = await rsn(connection).getAccount(wallet.account);
+      account = await rix(connection).getAccount(wallet.account);
     }
     dispatch({
       type: types.VALIDATE_WALLET_PASSWORD_PENDING

@@ -41,7 +41,7 @@ class WalletPanelFormStake extends Component<Props> {
       cpuOriginal: Decimal(parsedCpuWeight),
       decimalCpuAmount: Decimal(parsedCpuWeight),
       decimalNetAmount: Decimal(parsedNetWeight),
-      RSNbalance: (props.balance && props.balance.RSN) ? props.balance.RSN : 0,
+      RIXbalance: (props.balance && props.balance.RIX) ? props.balance.RIX : 0,
       formError: null,
       netAmountValid: true,
       netOriginal: Decimal(parsedNetWeight),
@@ -145,7 +145,7 @@ class WalletPanelFormStake extends Component<Props> {
       cpuOriginal,
       decimalCpuAmount,
       decimalNetAmount,
-      RSNbalance,
+      RIXbalance,
       netAmountValid,
       netOriginal
     } = this.state;
@@ -179,7 +179,7 @@ class WalletPanelFormStake extends Component<Props> {
     const cpuChange = decimalCpuAmount.minus(cpuOriginal);
     const netChange = decimalNetAmount.minus(netOriginal);
 
-    if (Decimal.max(0, cpuChange).plus(Decimal.max(0, netChange)).greaterThan(RSNbalance)) {
+    if (Decimal.max(0, cpuChange).plus(Decimal.max(0, netChange)).greaterThan(RIXbalance)) {
       return 'not_enough_balance';
     }
 
@@ -233,7 +233,7 @@ class WalletPanelFormStake extends Component<Props> {
       submitDisabled
     } = this.state;
 
-    const RSNbalance = balance.RSN || 0;
+    const RIXbalance = balance.RIX || 0;
 
     const shouldShowConfirm = this.state.confirming;
     const shouldShowForm = !shouldShowConfirm;
@@ -264,7 +264,7 @@ class WalletPanelFormStake extends Component<Props> {
                 ) : ''}
               <WalletPanelFormStakeStats
                 cpuOriginal={cpuOriginal}
-                RSNbalance={RSNbalance}
+                RIXbalance={RIXbalance}
                 netOriginal={netOriginal}
               />
               <Form
@@ -335,7 +335,7 @@ class WalletPanelFormStake extends Component<Props> {
               balance={balance}
               decimalCpuAmount={decimalCpuAmount}
               cpuOriginal={cpuOriginal}
-              RSNbalance={RSNbalance}
+              RIXbalance={RIXbalance}
               decimalNetAmount={decimalNetAmount}
               netOriginal={netOriginal}
               onBack={this.onBack}

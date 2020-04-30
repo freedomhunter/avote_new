@@ -35,7 +35,7 @@ class ToolsFormCreateAccount extends Component<Props> {
       confirming: false,
       delegatedBw,
       delegatedCpu,
-      RSNbalance: (balance && balance.RSN) ? balance.RSN : 0,
+      RIXbalance: (balance && balance.RIX) ? balance.RIX : 0,
       formErrors: {},
       ownerKey,
       ramAmount,
@@ -170,7 +170,7 @@ class ToolsFormCreateAccount extends Component<Props> {
     const {
       delegatedBw,
       delegatedCpu,
-      RSNbalance,
+      RIXbalance,
       ramAmount,
       ramPrice
     } = this.state;
@@ -197,7 +197,7 @@ class ToolsFormCreateAccount extends Component<Props> {
       submitDisabled = true;
     }
 
-    const decimalBalance = Decimal(RSNbalance);
+    const decimalBalance = Decimal(RIXbalance);
     const decimalDelegatedBw = Decimal(delegatedBw.split(' ')[0]);
     const decimalDelegatedCpu = Decimal(delegatedCpu.split(' ')[0]);
 
@@ -385,7 +385,7 @@ class ToolsFormCreateAccount extends Component<Props> {
                 />
                 {(ramPrice && !formErrors.ramAmount) ? (
                   <h4 style={{ margin: '30px' }}>
-                    {`${t('tools_form_create_account_ram_price_estimate')} ${ramPrice.toFixed(4)} RSN.`}
+                    {`${t('tools_form_create_account_ram_price_estimate')} ${ramPrice.toFixed(4)} RIX.`}
                   </h4>
                 ) : ''}
                 <FormMessageError

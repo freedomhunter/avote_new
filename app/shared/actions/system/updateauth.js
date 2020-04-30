@@ -1,7 +1,7 @@
 import * as types from '../types';
 
 import { getAccount } from '../accounts';
-import rsn from '../helpers/rsn';
+import rix from '../helpers/rix';
 
 export function updateauth(permission, parent, auth, authorizationOverride = false) {
   return (dispatch: () => void, getState) => {
@@ -15,7 +15,7 @@ export function updateauth(permission, parent, auth, authorizationOverride = fal
     if (authorizationOverride || connection.authorization) {
       authorization = [authorizationOverride || connection.authorization];
     }
-    return rsn(connection, true).updateauth({
+    return rix(connection, true).updateauth({
       account,
       permission,
       parent,

@@ -1,9 +1,9 @@
 import * as types from './types';
 
-import rsn from './helpers/rsn';
+import rix from './helpers/rix';
 import { getCurrencyBalance } from './accounts';
 
-export function transfer(from, to, quantity, memo, symbol = 'RSN') {
+export function transfer(from, to, quantity, memo, symbol = 'RIX') {
   return (dispatch: () => void, getState) => {
     const {
       balances,
@@ -15,7 +15,7 @@ export function transfer(from, to, quantity, memo, symbol = 'RSN') {
     try {
       const contracts = balances.__contracts;
       const account = contracts[symbol].contract;
-      return rsn(connection, true).transaction(account, contract => {
+      return rix(connection, true).transaction(account, contract => {
         contract.transfer(
           from,
           to,
@@ -29,7 +29,7 @@ export function transfer(from, to, quantity, memo, symbol = 'RSN') {
       }).then((tx) => {
         // If this is an offline transaction, also store the ABI
         if (!connection.sign && account !== 'arisen.token') {
-          return rsn(connection, true).getAbi(account).then((contract) =>
+          return rix(connection, true).getAbi(account).then((contract) =>
             dispatch({
               payload: {
                 contract,
