@@ -5,7 +5,20 @@ import { translate } from 'react-i18next';
 
 import WalletMessageContractTransfer from '../../../../../Global/Message/Contract/Transfer';
 
+
+
+const { Api, JsonRpc, RpcError } = require('@arisencore/js');
+const { JsSignatureProvider } = require('@arisencore/js/dist/rixjs-jssig');      // development only
+const fetch = require('node-fetch');                                    // node only; not needed in browsers
+const { TextEncoder, TextDecoder } = require('util');
+const defaultPrivateKey = "5Jj89B1WdE4jSjs6wKeeitZgwxuKr1WgZAttjoEG24PZc3jksoW"; // bob
+const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
+const rpc = new JsonRpc('https://greatchains.arisennodes.io', { fetch });
+const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
+
+
 class WalletPanelFormTransferSendConfirming extends Component<Props> {
+  
   onConfirm = (e) => {
     const {
       onConfirm
