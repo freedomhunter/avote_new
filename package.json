@@ -250,7 +250,7 @@
     "i18next-electron-language-detector": "^0.0.10",
     "i18next-sprintf-postprocessor": "^0.2.2",
     "i18next-sync-fs-backend": "^1.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "pretty-bytes": "^5.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
